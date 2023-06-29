@@ -185,7 +185,7 @@ function NavigationGroup({ group, className }) {
 
 export const navigation = [
   {
-    title: 'Guides',
+    title: 'Example Application',
     links: [
       { title: 'Introduction', href: '/documentation' },
       { title: 'Quickstart', href: '/documentation/quickstart' },
@@ -197,10 +197,10 @@ export const navigation = [
     ],
   },
   {
-    title: 'Resources',
+    title: 'API Reference',
     links: [
       { title: 'Contacts', href: '/documentation/contacts' },
-      { title: 'Conversations', href: '/documentation/conversations' },
+      { title: 'Tutorial', href: '/documentation/tutorial' },
       { title: 'Messages', href: '/documentation/messages' },
       { title: 'Groups', href: '/documentation/groups' },
       { title: 'Attachments', href: '/documentation/attachments' },

@@ -1,0 +1,315 @@
+export const description =
+  'On this page, we’ll dive into the different conversation endpoints you can use to manage conversations programmatically.'
+
+Once upon a time in the land of Webville, there was a powerful magician named Robyn. Robyn had a unique set of abilities that allowed it to fetch information from the far corners of the internet. It could send requests and receive responses at lightning speed, and its prowess was admired by developers everywhere.
+
+One day, Batman approached Robyn for help with building a web application. Batman had heard about Robyn's powerful features and wanted to harness them to create a remarkable application.
+
+
+## Synchronous and Asynchronous Requests
+
+
+To begin, Robyn taught Batman about its ability to handle both synchronous and asynchronous requests. "This means," Robyn explained, "I can fetch data in real-time, or I can fetch it later while other tasks are being completed."
+
+<Row>
+<Col>
+Batman was excited to learn about these features and started implementing them in the application. For a simple synchronous request, Batman wrote:
+</Col>
+  <Col sticky>
+
+    <CodeGroup title="Request" tag="GET" label="/hello_world">
+
+    ```python {{ title: 'untyped' }}
+    from robyn import Robyn
+
+    app = Robyn(__file__)
+
+    @app.get("/")
+    def h(request):
+        return "Hello, world"
+
+    app.start()
+    ```
+
+    ```python {{title: 'typed'}}
+    from robyn import Robyn
+
+    app = Robyn(__file__)
+
+    @app.get("/")
+    def h(request):
+        return "Hello, world"
+
+    app.start()
+
+
+
+    ```
+    </CodeGroup>
+  </Col>
+</Row>
+<Row>
+
+  <Col>
+    For an asynchronous request, Batman used:
+  </Col>
+  <Col sticky>
+    <CodeGroup title="Request" tag="GET" label="/hello_world">
+
+      ```python {{ title: 'untyped' }}
+      @app.get("/")
+      async def h(request):
+          return "Hello, world"
+
+      ```
+
+      ```python {{title: 'typed'}}
+      @app.get("/")
+      async def h(request: Request) -> str:
+          return "Hello, world"
+
+      ```
+    </CodeGroup>
+  </Col>
+</Row>
+
+--- 
+
+## Handling Different HTTP Requests
+
+<Row>
+<Col>
+Robyn then taught Batman how to handle various HTTP requests like GET, POST, PUT, PATCH, and DELETE. With Robyn's guidance, Batman could create endpoints for each request type, making the application versatile and efficient.
+
+For example, Batman learned to create a POST request like this:
+</Col>
+  <Col sticky>
+
+    <CodeGroup title="Request" tag="GET" label="/hello_world">
+
+    ```python {{ title: 'untyped' }}
+    @app.post("/")
+    async def h(request):
+        return "Hello World"
+
+    ```
+
+    ```python {{title: 'typed'}}
+    @app.post("/")
+    async def h(request):
+        return "Hello World"
+
+    ```
+    </CodeGroup>
+  </Col>
+</Row>
+
+---
+
+## Accessing Path Parameters and Query Parameters
+
+<Row>
+  <Col>
+
+  Robyn also showed Batman how to access path parameters and query parameters from incoming requests. This allowed Batman to create dynamic routes and gather specific information from the request.
+
+  For instance, Batman could create a route with a path parameter and access it like this:
+  
+
+  </Col>
+  <Col sticky>
+
+    <CodeGroup title="Request" tag="POST" label="/http_requests">
+
+    ```python {{ title: 'untyped' }}
+    from robyn import jsonify
+
+    @app.post("/jsonify/:id")
+    async def json(request):
+        print(request["path_params"]["id"])
+        return jsonify({"hello": "world"})
+
+
+    ```
+
+    ```python {{ title: 'sync' }}
+    from robyn import jsonify
+
+    @app.post("/jsonify/:id")
+    async def json(request):
+        print(request["path_params"]["id"])
+        return jsonify({"hello": "world"})
+
+    ```
+
+
+    </CodeGroup>
+
+
+  </Col>
+</Row>
+
+
+<Row>
+  <Col>
+
+  And for accessing query parameters, Batman could use the following code snippet:
+  
+
+  </Col>
+  <Col sticky>
+
+    <CodeGroup title="Request" tag="POST" label="/http_requests">
+
+    ```python {{ title: 'untyped' }}
+    @app.get("/query")
+    async def query_get(request):
+        query_data = request["queries"]
+        return jsonify(query_data)
+    ```
+
+    ```python {{ title: 'sync' }}
+    @app.get("/query")
+    async def query_get(request):
+        query_data = request["queries"]
+        return jsonify(query_data)
+    ```
+
+    </CodeGroup>
+  </Col>
+</Row>
+
+
+---
+
+As Batman continued to develop his web application with Robyn, he explored more features and implemented them using code samples.
+
+## Customizing Response Formats and Headers
+
+
+<Row>
+<Col>
+Batman learned to customize response formats by returning dictionaries or using Robyn's Response object. He could also set status codes and headers for each response. For example, Batman created a response with a dictionary like this:
+</Col>
+  <Col sticky>
+
+    <CodeGroup title="Request" tag="GET" label="/hello_world">
+
+    ```python {{ title: 'untyped' }}
+    @app.post("/dictionary")
+    async def dictionary(request):
+        return {
+            "status_code": 200,
+            "body": "This is a regular response",
+            "type": "text",
+            "headers": {"Header": "header_value"},
+        }
+
+    ```
+
+    ```python {{title: 'typed'}}
+    @app.post("/dictionary")
+    async def dictionary(request):
+        return {
+            "status_code": 200,
+            "body": "This is a regular response",
+            "type": "text",
+            "headers": {"Header": "header_value"},
+        }
+
+
+    ```
+    </CodeGroup>
+  </Col>
+</Row>
+
+
+<Row>
+<Col>
+To use the Response object, he wrote:
+</Col>
+  <Col sticky>
+
+    <CodeGroup title="Request" tag="GET" label="/hello_world">
+
+    ```python {{ title: 'untyped' }}
+    from robyn.robyn import Response
+
+    @app.get("/response")
+    async def response(request):
+        return Response(status_code=200, headers={}, body="OK")
+    ```
+
+    ```python {{title: 'typed'}}
+    from robyn.robyn import Response
+
+    @app.get("/response")
+    async def response(request):
+        return Response(status_code=200, headers={}, body="OK")
+
+    ```
+    </CodeGroup>
+  </Col>
+</Row>
+
+
+---
+
+## Global Request and Response Headers
+
+<Row>
+<Col>
+Batman could also set global request and response headers for his application. For example, to add a global request header, he used:
+
+</Col>
+  <Col sticky>
+
+    <CodeGroup title="Request" tag="GET" label="/hello_world">
+
+    ```python {{ title: 'untyped' }}
+    app.add_request_header("server", "robyn")
+
+    ```
+
+    ```python {{title: 'typed'}}
+    app.add_request_header("server", "robyn")
+
+    ```
+    </CodeGroup>
+  </Col>
+</Row>
+
+<Row>
+<Col>
+To add a response header
+</Col>
+  <Col sticky>
+
+    <CodeGroup title="Request" tag="GET" label="/hello_world">
+
+    ```python {{ title: 'untyped' }}
+    app.add_response_header("content-type", "application/json")
+
+    ```
+
+    ```python {{title: 'typed'}}
+    app.add_response_header("content-type", "application/json")
+
+    ```
+    </CodeGroup>
+  </Col>
+</Row>
+
+
+---
+
+
+
+## What's next?
+
+Great, you're now familiar with the certain advanced concepts of Robyn. Here are some things you can do next:
+
+- [Dive in deeper at Scaling and Templating](/documentation/templating)
+- [Learn about the different error messages in Protocol](/errors)
+
+

@@ -1,0 +1,113 @@
+export const description =
+  'On this page, we’ll dive into the different conversation endpoints you can use to manage conversations programmatically.'
+
+## Scaling and Templating
+
+Finally, Robyn showed Batman how to scale the application using multi-core processing and how to use templating engines like Jinja2 for rendering dynamic HTML content. These advanced techniques allowed Batman to optimize the performance of the application and create visually appealing user interfaces.
+
+
+## Scaling the Application
+
+<Row>
+<Col>
+Batman scaled his application across multiple cores for better performance. He used the following command:
+</Col>
+  <Col sticky>
+
+    <CodeGroup title="Request" tag="GET" label="/hello_world">
+
+    ```python {{ title: 'untyped' }}
+    python app.py --workers=N --processes=N
+    ```
+
+    ```python {{title: 'typed'}}
+    python app.py --workers=N --processes=N
+    ```
+    </CodeGroup>
+  </Col>
+</Row>
+
+-- 
+
+
+## Using Templates
+
+To render dynamic HTML content, Batman used Jinja2 templates. He created a template file and a route to render the template:
+
+
+<Row>
+<Col>
+Batman was excited to learn that he could add events as functions as well as decorators.
+</Col>
+  <Col sticky>
+
+    <CodeGroup title="Request" tag="GET" label="/hello_world">
+
+    ```
+    from robyn.templating import JinjaTemplate
+
+    current_file_path = pathlib.Path(__file__).parent.resolve()
+    JINJA_TEMPLATE = JinjaTemplate(os.path.join(current_file_path, "templates"))
+
+    @app.get("/template_render")
+    def template_render():
+        context = {"framework": "Robyn", "templating_engine": "Jinja2"}
+
+    template = JINJA_TEMPLATE.render_template(template_name="test.html", **context)
+    return template
+
+    ```
+
+    ```python {{title: 'typed'}}
+    from robyn.templating import JinjaTemplate
+
+    current_file_path = pathlib.Path(__file__).parent.resolve()
+    JINJA_TEMPLATE = JinjaTemplate(os.path.join(current_file_path, "templates"))
+
+    @app.get("/template_render")
+    def template_render():
+        context = {"framework": "Robyn", "templating_engine": "Jinja2"}
+
+    template = JINJA_TEMPLATE.render_template(template_name="test.html", **context)
+    return template
+
+    ```
+    </CodeGroup>
+  </Col>
+</Row>
+<Row>
+
+  <Col>
+  test.html file
+  </Col>
+  <Col sticky>
+    <CodeGroup title="Request" tag="GET" label="/hello_world">
+
+      ```html {{ title: 'untyped' }}
+        <!DOCTYPE html>
+        <html lang="en">
+        <head>
+          <meta charset="utf-8">
+          <title>Results</title>
+        </head>
+
+        <body>
+         Hello {{ framework }}! You're using {{ templating_engine }}.
+        </body>
+      ```
+    </CodeGroup>
+  </Col>
+</Row>
+
+
+
+
+
+## What's next?
+
+Great, you're now familiar with the certain advanced concepts of Robyn. Here are some things you can do next:
+
+- [File Uploads](/documentation/file-uploads)
+- [Learn about the different error messages in Protocol](/errors)
+
+

@@ -12,22 +12,8 @@ import Image from 'next/image'
 
 const resources = [
   {
-    href: '/contacts',
-    name: 'Contacts',
-    description:
-      'Learn about the contact model and how to create, retrieve, update, delete, and list contacts.',
-    icon: UserIcon,
-    pattern: {
-      y: 16,
-      squares: [
-        [0, 1],
-        [1, 3],
-      ],
-    },
-  },
-  {
-    href: '/conversations',
-    name: 'Conversations',
+    href: '/documentation/middlewares',
+    name: 'Middlewares',
     description:
       'Learn about the conversation model and how to create, retrieve, update, delete, and list conversations.',
     icon: ChatBubbleIcon,
@@ -40,28 +26,31 @@ const resources = [
     },
   },
   {
-    href: '/messages',
-    name: 'Messages',
+    href: '/documentation/templating',
+    name: 'Tutorial',
     description:
-      'Learn about the message model and how to create, retrieve, update, delete, and list messages.',
-    icon: EnvelopeIcon,
+      'Learn about the conversation model and how to create, retrieve, update, delete, and list conversations.',
+    icon: ChatBubbleIcon,
     pattern: {
-      y: 32,
+      y: -6,
       squares: [
-        [0, 2],
-        [1, 4],
+        [-1, 2],
+        [1, 3],
       ],
     },
   },
   {
-    href: '/groups',
-    name: 'Groups',
+    href: '/documentation/file-uploads',
+    name: 'Tutorial',
     description:
-      'Learn about the group model and how to create, retrieve, update, delete, and list groups.',
-    icon: UsersIcon,
+      'Learn about the conversation model and how to create, retrieve, update, delete, and list conversations.',
+    icon: ChatBubbleIcon,
     pattern: {
-      y: 22,
-      squares: [[0, 1]],
+      y: -6,
+      squares: [
+        [-1, 2],
+        [1, 3],
+      ],
     },
   },
 ]

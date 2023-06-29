@@ -1,0 +1,37 @@
+export const description =
+  'On this page, we’ll dive into the different conversation endpoints you can use to manage conversations programmatically.'
+
+## File Uploads
+
+Batman learned how to handle file uploads using Robyn. He created an endpoint to handle file uploads using the following code:
+
+
+
+## Scaling the Application
+
+<Row>
+<Col>
+Batman scaled his application across multiple cores for better performance. He used the following command:
+</Col>
+  <Col sticky>
+
+    <CodeGroup title="Request" tag="GET" label="/hello_world">
+
+    ```python {{ title: 'untyped' }}
+    from robyn.robyn import File
+
+    @app.post("/upload")
+    async def upload(file: File = File(...)):
+        with open("uploaded_file.txt", "wb") as f:
+            f.write(file.file.read())
+
+        return {"message": "File uploaded successfully"}
+
+    ```
+
+    </CodeGroup>
+  </Col>
+</Row>
+
+-- 
+
