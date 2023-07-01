@@ -1,0 +1,56 @@
+export const description =
+  'In this guide, we’ll look at how authentication works. Protocol offers two ways to authenticate your API requests: Basic authentication and OAuth2 with a token.'
+
+## Authentication and Authorization Middleware
+Batman added middleware to the Robyn application to verify the JWT tokens and to restrict access to certain endpoints based on the user's role.
+
+
+```python {{ title: 'Setting up Authentication Middlewares' }}
+from robyn.middleware import Middleware
+from . import jwt_utils, schemas, crud
+
+class AuthMiddleware(Middleware):
+    async def process_request(self, req: Request):
+        authorization = req.headers.get("Authorization")
+        if not authorization:
+            return
+
+        token = authorization.split(" ")[1]
+        try:
+            payload = jwt_utils.decode_access_token(token)
+            user_id = payload["sub"]
+        except JWTError:
+            return
+
+        user = crud.get_user(req.ctx.db, user_id)
+        req.ctx.user = user
+
+    async def process_response(self, req: Request, res: Response):
+        pass
+
+app.add_middleware(AuthMiddleware)
+
+def is_superuser(user: schemas.User):
+    return user.is_superuser
+
+@app.get("/users/me")
+async def get_current_user(user: schemas.User = Depends(is_superuser)):
+    return user
+
+```
+
+With the web application in place, the Gotham City Police Department could now efficiently manage crime data and track criminal activities in real-time. Batman had successfully used the Robyn web framework to build a real-world application to help fight crime in Gotham City.
+
+
+
+
+<div className="not-prose">
+  <Button
+    href="/documentation/real_time_notifications"
+    variant="text"
+    arrow="right"
+    children="Check out our list of first-party SDKs"
+  />
+</div>
+
+

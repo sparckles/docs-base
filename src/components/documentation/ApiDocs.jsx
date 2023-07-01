@@ -3,44 +3,37 @@ import { Heading } from '@/components/documentation/Heading'
 
 const guides = [
   {
-    href: '/documentation/example_app',
+    href: '/documentation/api_reference',
     name: 'Getting Started',
     description: 'Learn how to authenticate your API requests.',
   },
   {
-    href: '/documentation/example_app/authentication',
-    name: 'Authentication and Authorization',
-    description: 'Understand how to use authentication and authorization.',
+    href: '/documentation/api_reference/middlewares',
+    name: 'Middlewares, Events and Websockets',
+    description: 'Learn about Middlewares, Events and Websockets in Robyn.',
   },
   {
-    href: '/documentation/example_app/authentication-middlewares',
-    name: 'Middlewares',
-    description:
-      'Read about different kinds of Middlewares and how to use them.',
+    href: '/documentation/api_reference/file-uploads',
+    name: 'File Uploads',
+    description: 'Learn how to upload files to your server using Robyn.',
   },
   {
-    href: '/documentation/example_app/montoring_and_logging',
-    name: 'Monitoring and Logging',
+    href: '/documentation/api_reference/templating',
+    name: 'Templating',
     description: 'Learn how to have montoring and logging in Robyn.',
   },
   {
-    href: '/documentation/example_app/real_time_notifications',
-    name: 'Real Time Notifications',
-    description: 'Learn how to have real time notification in Robyn.',
-  },
-  {
-    href: '/documentation/example_app/deployment',
-    name: 'Deployments',
-    description:
-      'Learn how to deploy your app to production and manage your deployments.',
+    href: '/documentation/api_reference/custom-exception-handling',
+    name: 'Exception Handling',
+    description: 'Learn About Custom Exception Handling in Robyn.',
   },
 ]
 
-export function Guides() {
+export function ApiDocs() {
   return (
     <div className="my-16 xl:max-w-none">
-      <Heading level={2} id="guides">
-        Example Application
+      <Heading level={2} id="api_docs">
+        Api Docs
       </Heading>
       <div className="not-prose mt-4 grid grid-cols-1 gap-8 border-t border-zinc-900/5 pt-10 dark:border-white/5 sm:grid-cols-2 xl:grid-cols-4">
         {guides.map((guide) => (

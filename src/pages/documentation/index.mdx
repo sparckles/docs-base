@@ -1,5 +1,5 @@
 import { Guides } from '@/components/documentation/Guides'
-import { Resources } from '@/components/documentation/Resources'
+import { ApiDocs } from '@/components/documentation/ApiDocs'
 import { HeroPattern } from '@/components/documentation/HeroPattern'
 
 export const description =
@@ -7,33 +7,30 @@ export const description =
 
 export const sections = [
   { title: 'Example Application', id: 'guides' },
-  { title: 'Api Reference', id: 'resources' },
+  { title: 'Api Reference', id: 'api_docs' },
 ]
 
 <HeroPattern />
 
 # API Documentation
 
-Use the Protocol API to access contacts, conversations, group messages, and more and seamlessly integrate your product into the workflows of dozens of devoted Protocol users. {{ className: 'lead' }}
+Welcome to the Robyn API documentation. You'll find comprehensive guides and documentation to help you start working with Robyn as quickly as possible, as well as support if you get stuck. 
+
+We have divided the documentation into two parts: the [Example Application](#guides) and the [API Reference](#resources).
 
 <div className="not-prose mb-16 mt-6 flex gap-3">
-  <Button href="/quickstart" arrow="right" children="Quickstart" />
-  <Button href="/sdks" variant="outline" children="Explore SDKs" />
+  <Button href="/example-app" arrow="right" children="Example App" />
+  <Button href="/tutorial" variant="outline" children="Explore SDKs" />
 </div>
 
 ## Getting started {{ anchor: false }}
 
-To get started, create a new application in your [developer settings](#), then read about how to make requests for the resources you need to access using our HTTP APIs or dedicated client SDKs. When your integration is ready to go live, publish it to our [integrations directory](#) to reach the Protocol community. {{ className: 'lead' }}
+The Example Application is a simple web application that demonstrates how to use the Robyn API. It is a great place to start if you are new to Robyn.
 
-<div className="not-prose">
-  <Button
-    href="/sdks"
-    variant="text"
-    arrow="right"
-    children="Get your API key"
-  />
-</div>
+The API Reference contains detailed information about the Robyn API. It is a great place to start if you are already familiar with Robyn and want to learn more about the API.
+
 
 <Guides />
 
-<Resources />
+<ApiDocs />
+

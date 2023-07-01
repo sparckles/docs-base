@@ -185,25 +185,50 @@ function NavigationGroup({ group, className }) {
 
 export const navigation = [
   {
+    title: 'Documentation',
+    links: [{ title: 'Introduction', href: '/documentation' }],
+  },
+
+  {
     title: 'Example Application',
     links: [
-      { title: 'Introduction', href: '/documentation' },
-      { title: 'Quickstart', href: '/documentation/quickstart' },
-      { title: 'SDKs', href: '/documentation/sdks' },
-      { title: 'Authentication', href: '/documentation/authentication' },
-      { title: 'Pagination', href: '/documentation/pagination' },
-      { title: 'Errors', href: '/documentation/errors' },
-      { title: 'Webhooks', href: '/documentation/webhooks' },
+      { title: 'Getting Started', href: '/documentation/example_app' },
+      {
+        title: 'Authentication and Authorization',
+        href: '/documentation/example_app/authentication',
+      },
+      {
+        title: 'Middlewares',
+        href: '/documentation/example_app/authentication-middlewares',
+      },
+      {
+        title: 'Monitoring and Logging',
+        href: '/documentation/example_app/montoring_and_logging',
+      },
+      {
+        title: 'Real Time Notifications',
+        href: '/documentation/example_app/real_time_notifications',
+      },
+      { title: 'Deployment', href: '/documentation/example_app/deployment' },
     ],
   },
   {
     title: 'API Reference',
     links: [
-      { title: 'Contacts', href: '/documentation/contacts' },
-      { title: 'Tutorial', href: '/documentation/tutorial' },
-      { title: 'Messages', href: '/documentation/messages' },
-      { title: 'Groups', href: '/documentation/groups' },
-      { title: 'Attachments', href: '/documentation/attachments' },
+      { title: 'Getting Started', href: '/documentation/api_reference' },
+      {
+        title: 'Middlewares',
+        href: '/documentation/api_reference/middlewares',
+      },
+      {
+        title: 'File Uploads',
+        href: '/documentation/api_reference/file-uploads',
+      },
+      { title: 'Templating', href: '/documentation/api_reference/templating' },
+      {
+        title: 'Exception Handling',
+        href: '/documentation/api_reference/custom_exception_handler',
+      },
     ],
   },
 ]

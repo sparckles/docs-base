@@ -1,0 +1,108 @@
+export const description =
+  'In this guide, we’ll look at how authentication works. Protocol offers two ways to authenticate your API requests: Basic authentication and OAuth2 with a token.'
+
+# Real Life Web Apps with Robyn
+
+Batman was tasked with building a web application to manage the crime data in Gotham City. The application would allow the Gotham police department to store and retrieve data on criminal activities, suspects, and their locations. He decided to use the Robyn web framework to build this application efficiently and quickly.
+
+
+## Crime Data Model and Database Connection
+
+Batman designed a data model to represent crime data, including information about the crime, suspect, and location. He decided to use a SQLite database to store the data and used an ORM (Object Relational Mapping) library to interact with the database.
+
+
+```python {{ title: 'Example request with basic auth' }}
+from sqlalchemy import create_engine, Column, Integer, String, DateTime, Float
+from sqlalchemy.orm import declarative_base, sessionmaker
+
+DATABASE_URL = "sqlite:///./gotham_crime_data.db"
+
+engine = create_engine(DATABASE_URL)
+SessionLocal = sessionmaker(autocommit=False, autoflush=False, bind=engine)
+
+Base = declarative_base()
+
+class Crime(Base):
+    __tablename__ = "crimes"
+
+    id = Column(Integer, primary_key=True, index=True)
+    type = Column(String, index=True)
+    description = Column(String)
+    location = Column(String)
+    suspect_name = Column(String)
+    date_time = Column(DateTime)
+    latitude = Column(Float)
+    longitude = Column(Float)
+
+
+```
+
+
+## Setting up the Robyn Application
+
+Batman set up a Robyn application and configured it to use the database session to access the SQLite database.
+
+```bash {{ title: 'Example request with bearer token' }}
+from robyn import Robyn
+
+app = Robyn(__file__)
+
+# Dependency to provide a database session
+def get_db_session():
+    db = SessionLocal()
+    try:
+        yield db
+    finally:
+        db.close()
+```
+
+
+## Crime Data Endpoints
+
+Batman created various endpoints to manage crime data. These endpoints allowed the Gotham City Police Department to add, update, and retrieve crime data.
+
+```python {{ title: 'Setting up Routes' }}
+from robyn.robyn import Request, Response
+from sqlalchemy.orm import Session
+from . import crud, schemas
+
+@app.post("/crimes")
+async def add_crime(crime: schemas.CrimeCreate, db: Session = Depends(get_db_session)):
+    return crud.create_crime(db, crime)
+
+@app.get("/crimes")
+async def get_crimes(skip: int = 0, limit: int = 100, db: Session = Depends(get_db_session)):
+    crimes = crud.get_crimes(db, skip=skip, limit=limit)
+    return crimes
+
+@app.get("/crimes/{crime_id}")
+async def get_crime(crime_id: int, db: Session = Depends(get_db_session)):
+    crime = crud.get_crime(db, crime_id=crime_id)
+    if crime is None:
+        raise HTTPException(status_code=404, detail="Crime not found")
+    return crime
+
+@app.put("/crimes/{crime_id}")
+async def update_crime(crime_id: int, crime: schemas.CrimeUpdate, db: Session = Depends(get_db_session)):
+    updated_crime = crud.update_crime(db, crime_id=crime_id, crime=crime)
+    if updated_crime is None:
+        raise HTTPException(status_code=404, detail="Crime not found")
+    return updated_crime
+
+@app.delete("/crimes/{crime_id}")
+async def delete_crime(crime_id: int, db: Session = Depends(get_db_session)):
+    success = crud.delete_crime(db, crime_id=crime_id)
+    if not success:
+        raise HTTPException(status_code=404, detail="Crime not found")
+    return {"message": "Crime deleted successfully"}
+
+```
+
+<div className="not-prose">
+  <Button
+    href="/documentation/example-app-authentication.mdx"
+    variant="text"
+    arrow="right"
+    children="Check out our list of first-party SDKs"
+  />
+</div>
