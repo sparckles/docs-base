@@ -8,9 +8,34 @@ const guides = [
     description: 'Learn how to authenticate your API requests.',
   },
   {
+    href: '/documentation/api_reference/request_object',
+    name: 'The Request Object',
+    description: 'Learn about the Request Object in Robyn.',
+  },
+  {
     href: '/documentation/api_reference/middlewares',
     name: 'Middlewares, Events and Websockets',
     description: 'Learn about Middlewares, Events and Websockets in Robyn.',
+  },
+  {
+    href: '/documentation/api_reference/authentication',
+    name: 'Authentication',
+    description: 'Learn about Authentication in Robyn.',
+  },
+  {
+    href: '/documentation/api_reference/const_requests',
+    name: 'Const Requests and Multi Core Scaling',
+    description: 'Learn about Const Requests and Multi Core Scaling in Robyn.',
+  },
+  {
+    href: '/documentation/api_reference/cors',
+    name: 'CORS',
+    description: 'CORS',
+  },
+  {
+    href: '/documentation/api_reference/templating',
+    name: 'Templating',
+    description: 'Learn about Templating in Robyn.',
   },
   {
     href: '/documentation/api_reference/file-uploads',
@@ -19,40 +44,26 @@ const guides = [
       'Learn how to upload and download files to your server using Robyn.',
   },
   {
-    href: '/documentation/api_reference/templating',
-    name: 'Templating',
-    description: 'Learn how to use templating in Robyn.',
-  },
-  {
-    href: '/documentation/api_reference/custom-exception-handling',
-    name: 'Exception Handling',
-    description: 'Learn About Custom Exception Handling in Robyn.',
-  },
-  {
-    href: '/documentation/api_reference/advanced-features',
-    name: 'Advanced Features',
-    description: 'Lear about advanced features in Robyn.',
-  },
-  {
-    href: '/documentation/api_reference/authentication',
-    name: 'Authentication',
-    description: 'Learn About Authentication in Robyn.',
-  },
-  {
-    href: '/documentation/api_reference/const_requests',
-    name: 'Const Requests',
-    description: 'Learn About Const Requests in Robyn.',
-  },
-
-  {
-    href: '/documentation/api_reference/cors',
-    name: 'CORS',
-    description: 'Learn About CORS in Robyn.',
+    href: '/documentation/api_reference/websockets',
+    name: 'Websockets',
+    description: 'Learn how to use Websockets in Robyn.',
   },
   {
     href: '/documentation/api_reference/views',
     name: 'Code Organisation',
-    description: 'Learn About Code Organisation in Robyn.',
+    description: 'Learn about Views and SubRouters in Robyn.',
+  },
+
+  {
+    href: '/documentation/api_reference/exceptions',
+    name: 'Exceptions',
+    description: 'Learn how to handle exceptions in Robyn.',
+  },
+
+  {
+    href: '/documentation/api_reference/advanced-features',
+    name: 'Advanced Features',
+    description: 'Lear about advanced features in Robyn.',
   },
 ]
 

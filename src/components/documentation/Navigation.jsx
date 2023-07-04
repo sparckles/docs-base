@@ -215,27 +215,17 @@ export const navigation = [
   {
     title: 'API Reference',
     links: [
-      { title: 'Getting Started', href: '/documentation/api_reference' },
       {
-        title: 'Middlewares',
+        href: '/documentation/api_reference',
+        title: 'Getting Started',
+      },
+      {
+        href: '/documentation/api_reference/request_object',
+        title: 'The Request Object',
+      },
+      {
         href: '/documentation/api_reference/middlewares',
-      },
-      {
-        title: 'File Uploads',
-        href: '/documentation/api_reference/file-uploads',
-      },
-      { title: 'Templating', href: '/documentation/api_reference/templating' },
-      {
-        title: 'Exception Handling',
-        href: '/documentation/api_reference/custom_exception_handler',
-      },
-      {
-        href: '/documentation/api_reference/custom-exception-handling',
-        title: 'Exception Handling',
-      },
-      {
-        href: '/documentation/api_reference/advanced-features',
-        title: 'Advanced Features',
+        title: 'Middlewares, Events and Websockets',
       },
       {
         href: '/documentation/api_reference/authentication',
@@ -243,16 +233,37 @@ export const navigation = [
       },
       {
         href: '/documentation/api_reference/const_requests',
-        title: 'Const Requests',
+        title: 'Const Requests and Multi Core Scaling',
       },
-
       {
         href: '/documentation/api_reference/cors',
         title: 'CORS',
       },
       {
+        href: '/documentation/api_reference/templating',
+        title: 'Templating',
+      },
+      {
+        href: '/documentation/api_reference/file-uploads',
+        title: 'File Uploads',
+      },
+      {
+        href: '/documentation/api_reference/websockets',
+        title: 'Websockets',
+      },
+      {
         href: '/documentation/api_reference/views',
         title: 'Code Organisation',
+      },
+
+      {
+        href: '/documentation/api_reference/exceptions',
+        title: 'Exceptions',
+      },
+
+      {
+        href: '/documentation/api_reference/advanced-features',
+        title: 'Advanced Features',
       },
     ],
   },
