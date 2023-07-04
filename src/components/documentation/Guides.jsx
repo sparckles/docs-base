@@ -19,7 +19,7 @@ const guides = [
       'Read about different kinds of Middlewares and how to use them.',
   },
   {
-    href: '/documentation/example_app/montoring_and_logging',
+    href: '/documentation/example_app/monitoring_and_logging',
     name: 'Monitoring and Logging',
     description: 'Learn how to have montoring and logging in Robyn.',
   },

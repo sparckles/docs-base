@@ -1,38 +1,11 @@
 export const description =
   'On this page, we’ll dive into the different conversation endpoints you can use to manage conversations programmatically.'
 
-## Scaling and Templating
-
-Finally, Robyn showed Batman how to scale the application using multi-core processing and how to use templating engines like Jinja2 for rendering dynamic HTML content. These advanced techniques allowed Batman to optimize the performance of the application and create visually appealing user interfaces.
 
 
-## Scaling the Application
+## Templating.
 
-<Row>
-<Col>
-Batman scaled his application across multiple cores for better performance. He used the following command:
-</Col>
-  <Col sticky>
-
-    <CodeGroup title="Request" tag="GET" label="/hello_world">
-
-    ```python {{ title: 'untyped' }}
-    python app.py --workers=N --processes=N
-    ```
-
-    ```python {{title: 'typed'}}
-    python app.py --workers=N --processes=N
-    ```
-    </CodeGroup>
-  </Col>
-</Row>
-
--- 
-
-
-## Using Templates
-
-To render dynamic HTML content, Batman used Jinja2 templates. He created a template file and a route to render the template:
+Batman wanted to quickly render html pages on the website. He wanted to use a templating engine to render the html pages. Robyn told him that he can use the Jinja2 templating engine to render the html pages. He can use the `JinjaTemplate` class to render the html pages.
 
 
 <Row>
@@ -100,14 +73,55 @@ Batman was excited to learn that he could add events as functions as well as dec
 </Row>
 
 
+## Supporting Custom Templating Engines
+
+Batman was also super excited to know that Robyn allows the support of custom templating engines.
+
+<Row>
+<Col>
+To do that, you need to import the `TemplateInterface` from `robyn.templating`
+</Col>
+  <Col sticky>
+    <CodeGroup title="Request" tag="GET" label="/hello_world">
+
+      ```python {{ title: 'untyped' }}
+      from robyn.templating import TemplateInterface
+      ```
+    </CodeGroup>
+  </Col>
+</Row>
+
+
+<Row>
+<Col>
+Then You need to have a `render_template` method inside your implementation. So, an example would look like the following:
+</Col>
+  <Col sticky>
+    <CodeGroup title="Request" tag="GET" label="/hello_world">
+
+      ```python {{ title: 'untyped' }}
+      class JinjaTemplate(TemplateInterface):
+        def __init__(self, directory, encoding="utf-8", followlinks=False):
+            self.env = Environment(
+                loader=FileSystemLoader(
+                    searchpath=directory, encoding=encoding, followlinks=followlinks
+                )
+            )
+
+        def render_template(self, template_name, **kwargs):
+            return self.env.get_template(template_name).render(**kwargs)
+      ```
+    </CodeGroup>
+  </Col>
+</Row>
 
 
 
 ## What's next?
 
-Great, you're now familiar with the certain advanced concepts of Robyn. Here are some things you can do next:
+Now, batman wanted to have an ability to upload files to the server if any new villain appeared. Robyn introduced him to the file uploads feature. 
 
-- [File Uploads](/documentation/file-uploads)
+- [File Uploads](/documentation/api_reference/file-uploads)
 - [Learn about the different error messages in Protocol](/errors)
 
 

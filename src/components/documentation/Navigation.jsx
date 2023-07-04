@@ -229,6 +229,31 @@ export const navigation = [
         title: 'Exception Handling',
         href: '/documentation/api_reference/custom_exception_handler',
       },
+      {
+        href: '/documentation/api_reference/custom-exception-handling',
+        title: 'Exception Handling',
+      },
+      {
+        href: '/documentation/api_reference/advanced-features',
+        title: 'Advanced Features',
+      },
+      {
+        href: '/documentation/api_reference/authentication',
+        title: 'Authentication',
+      },
+      {
+        href: '/documentation/api_reference/const_requests',
+        title: 'Const Requests',
+      },
+
+      {
+        href: '/documentation/api_reference/cors',
+        title: 'CORS',
+      },
+      {
+        href: '/documentation/api_reference/views',
+        title: 'Code Organisation',
+      },
     ],
   },
 ]

@@ -15,17 +15,44 @@ const guides = [
   {
     href: '/documentation/api_reference/file-uploads',
     name: 'File Uploads',
-    description: 'Learn how to upload files to your server using Robyn.',
+    description:
+      'Learn how to upload and download files to your server using Robyn.',
   },
   {
     href: '/documentation/api_reference/templating',
     name: 'Templating',
-    description: 'Learn how to have montoring and logging in Robyn.',
+    description: 'Learn how to use templating in Robyn.',
   },
   {
     href: '/documentation/api_reference/custom-exception-handling',
     name: 'Exception Handling',
     description: 'Learn About Custom Exception Handling in Robyn.',
+  },
+  {
+    href: '/documentation/api_reference/advanced-features',
+    name: 'Advanced Features',
+    description: 'Lear about advanced features in Robyn.',
+  },
+  {
+    href: '/documentation/api_reference/authentication',
+    name: 'Authentication',
+    description: 'Learn About Authentication in Robyn.',
+  },
+  {
+    href: '/documentation/api_reference/const_requests',
+    name: 'Const Requests',
+    description: 'Learn About Const Requests in Robyn.',
+  },
+
+  {
+    href: '/documentation/api_reference/cors',
+    name: 'CORS',
+    description: 'Learn About CORS in Robyn.',
+  },
+  {
+    href: '/documentation/api_reference/views',
+    name: 'Code Organisation',
+    description: 'Learn About Code Organisation in Robyn.',
   },
 ]
 

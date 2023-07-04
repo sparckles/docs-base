@@ -6,7 +6,6 @@ export const description =
 Batman learned how to handle file uploads using Robyn. He created an endpoint to handle file uploads using the following code:
 
 
-
 ## Scaling the Application
 
 <Row>
@@ -33,5 +32,77 @@ Batman scaled his application across multiple cores for better performance. He u
   </Col>
 </Row>
 
--- 
+---
+
+## File Downloads
+
+Batman now wanted to allow users to download files from his application. He created an endpoint to handle file downloads using the following code:
+
+
+### Serving Simple HTML Files
+
+<Row>
+<Col>
+Batman scaled his application across multiple cores for better performance. He used the following command:
+</Col>
+  <Col sticky>
+
+    <CodeGroup title="Request" tag="GET" label="/hello_world">
+
+    ```python {{ title: 'untyped' }}
+    from robyn import Robyn, serve_html
+
+    app = Robyn(__file__)
+
+
+    @app.get("/")
+    async def h(request):
+        return serve_html("./index.html")
+
+    app.start(port=8080)
+
+    ```
+
+    </CodeGroup>
+  </Col>
+</Row>
+
+### Serving Other Files
+
+
+<Row>
+<Col>
+Batman scaled his application across multiple cores for better performance. He used the following command:
+</Col>
+  <Col sticky>
+
+    <CodeGroup title="Request" tag="GET" label="/hello_world">
+
+    ```python {{ title: 'untyped' }}
+    from robyn import Robyn, serve_file
+
+    app = Robyn(__file__)
+
+
+    @app.get("/")
+    async def h(request):
+        return serve_file("./index.html")
+
+    app.start(port=8080)
+
+    ```
+
+    </CodeGroup>
+  </Col>
+</Row>
+
+
+## What's next?
+
+Now, Batman was ready to learn about the advanced features of Robyn. He wanted to find a way to get realtime updates in his dashboard.
+
+- [Dive in deeper at Scaling and Templating](/documentation/api_reference/websockets)
+- [Advanced features](/documentation/advanced-features)
+
+
 
