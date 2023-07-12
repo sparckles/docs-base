@@ -43,17 +43,6 @@ async def search_crimes(request):
 
 ```
 
-## Crime Heat Map
-
-
-Batman decided to visualize the crime data on a heat map to help the police identify high-crime areas in Gotham City. He integrated a mapping library and created a new endpoint to retrieve the geospatial data required to generate the heat map.
-
-```python {{ title: 'Crime Heat Map' }}
-@app.get("/crimes/heatmap")
-async def get_crime_heatmap_data():
-    heatmap_data = crud.get_heatmap_data(db)
-    return heatmap_data
-```
 
 With the new features in place, the Gotham City Police Department was able to use the web application more effectively to track criminal activities and deploy resources efficiently. Batman's work on the Robyn web framework had a significant impact on Gotham City's crime-fighting efforts, making it a safer place for its citizens.
 
