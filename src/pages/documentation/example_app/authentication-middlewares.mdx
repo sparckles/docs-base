@@ -8,27 +8,28 @@ Batman added middleware to the Robyn application to verify the JWT tokens and to
 ```python {{ title: 'Setting up Authentication Middlewares' }}
 from robyn.middleware import Middleware
 from . import jwt_utils, schemas, crud
+from robyn.authentication import AuthenticationHandler, BearerGetter, Identity
 
-class AuthMiddleware(Middleware):
-    async def process_request(self, req: Request):
+
+class BasicAuthHandler(AuthenticationHandler):
+    def authenticate(self, request: Request) -> Optional[Identity]:
         authorization = req.headers.get("Authorization")
         if not authorization:
             return
 
         token = authorization.split(" ")[1]
+
         try:
             payload = jwt_utils.decode_access_token(token)
             user_id = payload["sub"]
         except JWTError:
             return
 
-        user = crud.get_user(req.ctx.db, user_id)
-        req.ctx.user = user
+        user = crud.get_user(db, user_id)
+        return Identity(claims={"user": user})
 
-    async def process_response(self, req: Request, res: Response):
-        pass
 
-app.add_middleware(AuthMiddleware)
+app.configure_authentication(BasicAuthHandler(token_getter=BearerGetter()))
 
 def is_superuser(user: schemas.User):
     return user.is_superuser
@@ -46,7 +47,7 @@ With the web application in place, the Gotham City Police Department could now e
 
 <div className="not-prose">
   <Button
-    href="/documentation/real_time_notifications"
+    href="/documentation/example_app/real_time_notifications"
     variant="text"
     arrow="right"
     children="Check out our list of first-party SDKs"

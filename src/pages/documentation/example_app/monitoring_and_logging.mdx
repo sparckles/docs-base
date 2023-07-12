@@ -7,11 +7,11 @@ from robyn import Logger
 
 logger = Logger(app)
 
-@app.before_request("/")
+@app.before_request()
 async def log_request(request: Request):
     logger.info(f"Received request: {request}")
 
-@app.after_request("/")
+@app.after_request()
 async def log_response(response: Response):
     logger.info(f"Sending response: {response}")
 ```

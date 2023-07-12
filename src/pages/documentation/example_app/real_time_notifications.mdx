@@ -32,7 +32,12 @@ To make it easier for the police officers to search for specific crimes or crimi
 
 ```python {{ title: 'Advanced Search and Filtering' }}
 @app.get("/crimes/search")
-async def search_crimes(crime_type: str = None, date: str = None, location: str = None, status: str = None, db: Session = Depends(get_db_session)):
+async def search_crimes(request):
+    crime_type = request.query_params.get("crime_type")
+    date = request.query_params.get("date")
+    location = request.query_params.get("location")
+    status = request.query_params.get("status")
+
     crimes = crud.search_crimes(db, crime_type=crime_type, date=date, location=location, status=status)
     return crimes
 
@@ -45,7 +50,7 @@ Batman decided to visualize the crime data on a heat map to help the police iden
 
 ```python {{ title: 'Crime Heat Map' }}
 @app.get("/crimes/heatmap")
-async def get_crime_heatmap_data(db: Session = Depends(get_db_session)):
+async def get_crime_heatmap_data():
     heatmap_data = crud.get_heatmap_data(db)
     return heatmap_data
 ```
@@ -60,7 +65,7 @@ Although Batman had achieved great success with the current implementation, he k
 
 <div className="not-prose">
   <Button
-    href="/documentation/monitoring_and_logging"
+    href="/documentation/example_app/monitoring_and_logging"
     variant="text"
     arrow="right"
     children="Check out our list of first-party SDKs"

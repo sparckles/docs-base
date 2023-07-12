@@ -11,8 +11,8 @@ Batman added a new User model to represent the users who can access the applicat
 
 
 ```python {{ title: 'Example request with basic auth' }}
+# models.py
 from sqlalchemy import Column, Integer, String, Boolean
-from sqlalchemy.orm import relationship
 
 class User(Base):
     __tablename__ = "users"
@@ -22,6 +22,33 @@ class User(Base):
     hashed_password = Column(String)
     is_active = Column(Boolean, default=True)
     is_superuser = Column(Boolean, default=False)
+```
+
+Then in crud.py, he added a new method to create a user.
+
+```python {{ title: 'Example request with basic auth' }}
+# crud.py
+
+from sqlalchemy.orm import Session
+from .models import User
+
+from passlib.context import CryptContext
+
+pwd_context = CryptContext(schemes=["bcrypt"], deprecated="auto")
+
+def get_password_hash(password: str) -> str:
+    return pwd_context.hash(password)
+
+def get_user(db: Session, user_id: int):
+    return db.query(User).filter(User.id == user_id).first()
+
+def create_user(db: Session, user: User):
+    hashed_password = get_password_hash(user.password)
+    db_user = User(username=user.username, hashed_password=hashed_password)
+    db.add(db_user)
+    db.commit()
+    db.refresh(db_user)
+    return db_user
 
 ```
 
@@ -31,6 +58,7 @@ class User(Base):
 Batman created utility functions to handle authentication, including hashing passwords and verifying passwords.
 
 ```bash {{ title: 'Example request with bearer token' }}
+# crud.py
 from passlib.context import CryptContext
 from jose import JWTError, jwt
 
@@ -66,17 +94,18 @@ Batman added a new endpoint to allow users to register.
 from . import crud, schemas
 
 @app.post("/users/register")
-async def register_user(user: schemas.UserCreate, db: Session = Depends(get_db_session)):
+async def register_user(request, user: UserCreate):
+    user = request.query_params.get("user")
     return crud.create_user(db, user)
 
 ```
 
 <div className="not-prose">
   <Button
-    href="/sdks"
+    href="/documentation/example_app/authentication-middlewares"
     variant="text"
     arrow="right"
-    children="Check out our list of first-party SDKs"
+    children="Next: Authentication Middlewares"
   />
 </div>
 
