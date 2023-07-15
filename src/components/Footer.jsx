@@ -1,24 +1,24 @@
 import Link from 'next/link'
 
 import { Container } from '@/components/Container'
-import { DiscordIcon } from './SocialIcons'
+import { GitHubIcon } from './SocialIcons'
 
-function NavLink({ href, children }) {
+function NavLink({ href, children, ...props }) {
   return (
-    <Link href={href} className="transition hover:text-yellow-400">
+    <Link {...props} href={href} className="transition hover:text-yellow-400">
       {children}
     </Link>
   )
 }
 
-function DiscordButton() {
+function GithubButton() {
   return (
     <button
       type="button"
       aria-label="Toggle dark mode"
-      className="group rounded-full bg-white/90 px-3 py-2 shadow-lg shadow-zinc-800/5 ring-1 ring-zinc-900/5 backdrop-blur transition dark:bg-zinc-800/90 dark:ring-white/10 dark:hover:ring-white/20"
+      className="group rounded-full border-2 border-yellow-500 bg-white/90 px-3 py-2 shadow-lg shadow-zinc-800/5 ring-1 ring-zinc-900/5 backdrop-blur transition dark:bg-zinc-800/90 dark:ring-white/10 dark:hover:ring-white/20"
     >
-      <DiscordIcon className="hidden h-6 w-6 fill-zinc-700 stroke-zinc-500 transition dark:block [@media(prefers-color-scheme:dark)]:group-hover:stroke-zinc-400 [@media_not_(prefers-color-scheme:dark)]:fill-yellow-400/10 [@media_not_(prefers-color-scheme:dark)]:stroke-yellow-500" />
+      <GitHubIcon className="hidden h-6 w-6 fill-zinc-700 stroke-zinc-500 transition dark:block [@media(prefers-color-scheme:dark)]:group-hover:stroke-zinc-400 [@media_not_(prefers-color-scheme:dark)]:fill-yellow-400/10 [@media_not_(prefers-color-scheme:dark)]:stroke-yellow-500" />
     </button>
   )
 }
@@ -29,7 +29,9 @@ export function Footer() {
       <Container className="bottom-2 w-full" style={{ position: 'fixed' }}>
         <div className="flex justify-end md:flex-1">
           <div className="pointer-events-auto">
-            <DiscordButton />
+            <Link href="https://github.com/sparckles/robyn">
+              <GithubButton />
+            </Link>
           </div>
         </div>
       </Container>
@@ -44,8 +46,8 @@ export function Footer() {
                   <NavLink href="/documentation">Documentation</NavLink>
                   <NavLink href="/news">News</NavLink>
                   <NavLink href="/community">Community</NavLink>
-                  <NavLink href="https://github.com/sparckles/robyn">
-                    GitHub
+                  <NavLink href="https://discord.gg/rkERZ5eNU8" target="_blank">
+                    Discord
                   </NavLink>
                 </div>
                 <p className="text-sm text-zinc-400 dark:text-zinc-500">

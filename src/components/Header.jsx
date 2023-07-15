@@ -136,8 +136,8 @@ function DesktopNavigation(props) {
         <NavItem href="/documentation">Documentation</NavItem>
         <NavItem href="/releases">News</NavItem>
         <NavItem href="/community">Community</NavItem>
-        <NavItem href="https://github.com/sansyrox/robyn/" target="_blank">
-          GitHub
+        <NavItem href="https://discord.gg/rkERZ5eNU8" target="_blank">
+          Discord
         </NavItem>
       </ul>
     </nav>
