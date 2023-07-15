@@ -216,7 +216,11 @@ export const navigation = [
     title: 'API Reference',
     links: [
       {
-        href: '/documentation/api_reference',
+        href: '/documentation/api_reference/',
+        title: 'Installation',
+      },
+      {
+        href: '/documentation/api_reference/getting_started',
         title: 'Getting Started',
       },
       {

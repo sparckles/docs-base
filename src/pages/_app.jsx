@@ -49,11 +49,9 @@ export default function App({ Component, pageProps, router }) {
   } else if (router_.pathname.includes('release')) {
     return (
       <>
-        <MDXProvider components={releaseMdxComponents}>
-          <ReleaseLayout>
-            <Component {...pageProps} />
-          </ReleaseLayout>
-        </MDXProvider>
+        <ReleaseLayout>
+          <Component {...pageProps} />
+        </ReleaseLayout>
       </>
     )
   }

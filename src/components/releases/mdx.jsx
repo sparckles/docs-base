@@ -12,14 +12,16 @@ export const wrapper = function Wrapper({ children }) {
   return children
 }
 
-export const h2 = function H2(props) {
+export function H2(props) {
   let { isFeed } = useFeed()
 
   if (isFeed) {
     return null
   }
 
-  return <h2 {...props} />
+  return (
+    <h2 className="text-2xs/4 typography  font-bold text-white/50" {...props} />
+  )
 }
 
 export const img = function Img(props) {
@@ -72,7 +74,7 @@ function ArticleHeader({ id, date }) {
   )
 }
 
-export const article = function Article({ id, title, date, children }) {
+export function Article({ id, title, date, children }) {
   let { isFeed } = useFeed()
   let heightRef = useRef()
   let [heightAdjustment, setHeightAdjustment] = useState(0)
@@ -117,6 +119,13 @@ export const article = function Article({ id, title, date, children }) {
       </div>
     </article>
   )
+}
+
+export const article = Article
+export const h2 = H2
+
+export const ul = function UnorderedList({ children }) {
+  return <ul className="list-inside list-disc">{children}</ul>
 }
 
 export const code = function Code({ highlightedCode, ...props }) {

@@ -4,9 +4,15 @@ import { Heading } from '@/components/documentation/Heading'
 const guides = [
   {
     href: '/documentation/api_reference',
-    name: 'Getting Started',
-    description: 'Learn how to authenticate your API requests.',
+    name: 'Installation',
+    description: 'Start using Robyn in your project.',
   },
+  {
+    href: '/documentation/api_reference/getting_started',
+    name: 'Getting Started',
+    description: 'Start with creating basic routes in Robyn.',
+  },
+
   {
     href: '/documentation/api_reference/request_object',
     name: 'The Request Object',
