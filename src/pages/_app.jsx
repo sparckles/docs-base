@@ -1,9 +1,7 @@
 import { useEffect, useRef } from 'react'
 
-import { Footer } from '@/components/Footer'
+import { Footer, GithubButton } from '@/components/Footer'
 import { Header } from '@/components/Header'
-
-import Head from 'next/head'
 
 import '@/styles/tailwind.css'
 import '@/styles/documentation.css'
@@ -11,8 +9,10 @@ import 'focus-visible'
 import { Router, useRouter } from 'next/router'
 
 import { MDXProvider } from '@mdx-js/react'
+import Link from 'next/link'
 
 import { Layout } from '@/components/documentation/Layout'
+import { Container } from '@/components/Container'
 import { Layout as ReleaseLayout } from '@/components/releases/Layout'
 import * as mdxComponents from '@/components/documentation/mdx'
 import * as releaseMdxComponents from '@/components/releases/mdx'
@@ -40,18 +40,32 @@ export default function App({ Component, pageProps, router }) {
 
   if (router_.pathname.includes('documentation')) {
     return (
-      <MDXProvider components={mdxComponents}>
-        <Layout {...pageProps}>
-          <Component {...pageProps} />
-        </Layout>
-      </MDXProvider>
+      <>
+        <Header />
+        <MDXProvider components={mdxComponents}>
+          <Layout {...pageProps}>
+            <Component {...pageProps} />
+          </Layout>
+        </MDXProvider>
+        <Container className="bottom-2 w-full" style={{ position: 'fixed' }}>
+          <div className="flex justify-end md:flex-1">
+            <div className="pointer-events-auto">
+              <Link target="_blank" href="https://github.com/sparckles/robyn">
+                <GithubButton />
+              </Link>
+            </div>
+          </div>
+        </Container>
+      </>
     )
   } else if (router_.pathname.includes('release')) {
     return (
       <>
+        <Header />
         <ReleaseLayout>
           <Component {...pageProps} />
         </ReleaseLayout>
+        <Footer />
       </>
     )
   }

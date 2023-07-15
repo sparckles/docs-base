@@ -10,7 +10,6 @@ import { SectionProvider } from '@/components/documentation/SectionProvider'
 export function Layout({ children, sections = [] }) {
   return (
     <SectionProvider sections={sections}>
-      <Header />
       <div className="lg:ml-72 xl:ml-80">
         <motion.header
           layoutScroll

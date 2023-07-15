@@ -11,7 +11,7 @@ function NavLink({ href, children, ...props }) {
   )
 }
 
-function GithubButton() {
+export function GithubButton() {
   return (
     <button
       type="button"
@@ -29,7 +29,7 @@ export function Footer() {
       <Container className="bottom-2 w-full" style={{ position: 'fixed' }}>
         <div className="flex justify-end md:flex-1">
           <div className="pointer-events-auto">
-            <Link href="https://github.com/sparckles/robyn">
+            <Link target="_blank" href="https://github.com/sparckles/robyn">
               <GithubButton />
             </Link>
           </div>

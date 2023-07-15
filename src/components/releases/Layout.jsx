@@ -44,7 +44,6 @@ function FixedSidebar({ main }) {
 export function Layout({ children }) {
   return (
     <>
-      <Header />
       <FixedSidebar main={<Intro />} />
       <div
         className="absolute inset-x-0 top-4 -z-10 flex transform-gpu justify-center overflow-hidden blur-3xl"

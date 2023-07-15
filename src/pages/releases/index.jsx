@@ -18,16 +18,20 @@ const ChangelogPage = ({ releases }) => {
   return (
     <>
       {releases.map((release) => (
-        <MDXProvider components={releaseMdxComponents}>
+        <MDXProvider key={release.id} components={releaseMdxComponents}>
           <Article
             key={release.id}
             date={new Date(release.publishedAt)}
             id={release.name}
           >
-            <H2 className="text-lg font-extrabold text-white">
+            <H2 key={release.id} className="text-lg font-extrabold text-white">
               {release.name}
             </H2>
-            <MDXRemote {...release.body} components={releaseMdxComponents} />
+            <MDXRemote
+              key={release.id}
+              {...release.body}
+              components={releaseMdxComponents}
+            />
           </Article>
         </MDXProvider>
       ))}
