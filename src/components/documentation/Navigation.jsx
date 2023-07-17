@@ -212,7 +212,7 @@ export const navigation = [
       },
       {
         title: 'Monitoring and Logging',
-        href: '/documentation/example_app/montoring_and_logging',
+        href: '/documentation/example_app/monitoring_and_logging',
       },
       { title: 'Deployment', href: '/documentation/example_app/deployment' },
       { title: 'Templates', href: '/documentation/example_app/templates' },
