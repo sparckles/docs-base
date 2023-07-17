@@ -194,6 +194,11 @@ export const navigation = [
     links: [
       { title: 'Getting Started', href: '/documentation/example_app' },
       {
+        title: 'Modeling Routes',
+        href: '/documentation/example_app/modeling_routes',
+      },
+
+      {
         title: 'Authentication and Authorization',
         href: '/documentation/example_app/authentication',
       },
@@ -202,14 +207,19 @@ export const navigation = [
         href: '/documentation/example_app/authentication-middlewares',
       },
       {
-        title: 'Monitoring and Logging',
-        href: '/documentation/example_app/montoring_and_logging',
-      },
-      {
         title: 'Real Time Notifications',
         href: '/documentation/example_app/real_time_notifications',
       },
+      {
+        title: 'Monitoring and Logging',
+        href: '/documentation/example_app/montoring_and_logging',
+      },
       { title: 'Deployment', href: '/documentation/example_app/deployment' },
+      { title: 'Templates', href: '/documentation/example_app/templates' },
+      {
+        title: 'SubRouters and Views',
+        href: '/documentation/example_app/subrouters_and_views',
+      },
     ],
   },
   {

@@ -43,6 +43,7 @@ Batman set up a Robyn application and configured it to use the database session 
 Based on the Database model, Batman created a few helper methods to interact with the database. These methods would be used by the endpoints to perform CRUD operations on the database.
 
 ```python {{ title: 'crud.py' }}
+# crud.py
 from sqlalchemy.orm import Session
 from .models import  Crime
 

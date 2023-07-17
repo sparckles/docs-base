@@ -20,17 +20,13 @@ class User(Base):
     id = Column(Integer, primary_key=True, index=True)
     username = Column(String, unique=True, index=True)
     hashed_password = Column(String)
-    is_active = Column(Boolean, default=True)
-    is_superuser = Column(Boolean, default=False)
 
     
     def __repr__(self):
-        return "<User(id={id}, username={username}, hashed_password={hashed_password}, is_active={is_active}, is_superuser={is_superuser})>".format(
+        return "<User(id={id}, username={username}, hashed_password={hashed_password})>".format(
             id=self.id,
             username=self.username,
             hashed_password=self.hashed_password,
-            is_active=self.is_active,
-            is_superuser=self.is_superuser,
         )
 
 
@@ -40,6 +36,7 @@ Then in crud.py, he added a new method to create a user.
 
 ```python {{ title: 'Example request with basic auth' }}
 # crud.py
+# also need to do pip install passlib[bcrypt]
 
 from sqlalchemy.orm import Session
 from .models import User
@@ -71,6 +68,8 @@ Batman created utility functions to handle authentication, including hashing pas
 
 ```bash {{ title: 'Example request with bearer token' }}
 # crud.py
+# also need to do pip install passlib[bcrypt]
+# pip install "python-jose[cryptography]"
 from passlib.context import CryptContext
 from jose import JWTError, jwt
 
@@ -106,7 +105,7 @@ def authenticate_user(db: Session, username: str, password: str):
     if not verify_password(password, user.hashed_password):
         return False
 
-    created_token = create_access_token(data={"sub": user.username})
+    created_token = create_access_token(data={"sub": .username})
     return created_token
 
 
