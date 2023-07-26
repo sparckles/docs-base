@@ -11,7 +11,7 @@ function MenuIcon(props) {
     <button
       type="button"
       aria-label="Toggle dark mode"
-      className="group rounded-full bg-white/90 px-3 py-2 shadow-lg shadow-zinc-800/5 ring-1 ring-zinc-900/5 backdrop-blur transition dark:bg-zinc-800/90 dark:ring-white/10 dark:hover:ring-white/20"
+      className="group rounded-full bg-zinc-800/90 px-3 py-2 shadow-lg shadow-zinc-800/5  ring-1 ring-white/10 backdrop-blur transition hover:ring-white/20"
     >
       <svg
         viewBox="0 0 10 9"
@@ -62,11 +62,11 @@ export function MobileNavigation() {
     <IsInsideMobileNavigationContext.Provider value={true}>
       <button
         type="button"
-        className="flex h-6 w-6 items-center justify-center rounded-md transition hover:bg-zinc-900/5 dark:hover:bg-white/5"
+        className="flex h-6 w-6 items-center justify-center rounded-md transition hover:bg-white/5"
         aria-label="Toggle navigation"
         onClick={toggle}
       >
-        <ToggleIcon className="w-2.5 stroke-zinc-900 dark:stroke-white" />
+        <ToggleIcon className="w-2.5 stroke-white" />
       </button>
       {!isInsideMobileNavigation && (
         <Transition.Root show={isOpen} as={Fragment}>
@@ -80,7 +80,7 @@ export function MobileNavigation() {
               leaveFrom="opacity-100"
               leaveTo="opacity-0"
             >
-              <div className="fixed inset-0 top-0 bg-zinc-900 backdrop-blur-sm dark:bg-black/40" />
+              <div className="fixed inset-0 top-0 bg-black/40 backdrop-blur-sm" />
             </Transition.Child>
 
             <Dialog.Panel>
@@ -107,7 +107,7 @@ export function MobileNavigation() {
               >
                 <motion.div
                   layoutScroll
-                  className="ring-zinc-900/7.5 fixed bottom-0 left-0 top-0 w-full overflow-y-auto  px-4 pb-4 pt-6 shadow-lg shadow-zinc-900/10 ring-1 dark:bg-black dark:ring-black min-[416px]:max-w-sm sm:px-6 sm:pb-10"
+                  className="ring-zinc-900/7.5 fixed bottom-0 left-0 top-0 w-full overflow-y-auto  bg-black px-4 pb-4 pt-6 shadow-lg shadow-zinc-900/10 ring-1 ring-black min-[416px]:max-w-sm sm:px-6 sm:pb-10"
                 >
                   <Navigation />
                 </motion.div>

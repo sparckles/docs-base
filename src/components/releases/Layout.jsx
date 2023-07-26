@@ -1,7 +1,6 @@
 import { useId } from 'react'
 
 import { Intro } from '@/components/releases/Intro'
-import { Header } from '@/components/Header'
 
 function Timeline() {
   let id = useId()
@@ -16,7 +15,7 @@ function Timeline() {
           <pattern id={id} width="6" height="8" patternUnits="userSpaceOnUse">
             <path
               d="M0 0H6M0 8H6"
-              className="stroke-sky-900/10 dark:stroke-white/10 xl:stroke-white/10"
+              className="stroke-white/10 xl:stroke-white/10"
               fill="none"
             />
           </pattern>

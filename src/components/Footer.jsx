@@ -16,9 +16,9 @@ export function GithubButton() {
     <button
       type="button"
       aria-label="Toggle dark mode"
-      className="group rounded-full border-2 border-yellow-500 bg-white/90 px-3 py-2 shadow-lg shadow-zinc-800/5 ring-1 ring-zinc-900/5 backdrop-blur transition dark:bg-zinc-800/90 dark:ring-white/10 dark:hover:ring-white/20"
+      className="group rounded-full border-2 border-yellow-500 bg-zinc-800/90 px-3 py-2 shadow-lg shadow-zinc-800/5 ring-1 ring-white/10  backdrop-blur transition hover:ring-white/20"
     >
-      <GitHubIcon className="hidden h-6 w-6 fill-zinc-700 stroke-zinc-500 transition dark:block [@media(prefers-color-scheme:dark)]:group-hover:stroke-zinc-400 [@media_not_(prefers-color-scheme:dark)]:fill-yellow-400/10 [@media_not_(prefers-color-scheme:dark)]:stroke-yellow-500" />
+      <GitHubIcon className="block h-6 w-6 fill-zinc-700 stroke-zinc-500 transition group-hover:stroke-zinc-400" />
     </button>
   )
 }
@@ -38,10 +38,10 @@ export function Footer() {
 
       <footer className="mt-32">
         <Container.Outer>
-          <div className="border-t border-zinc-100 pb-16 pt-10 dark:border-zinc-700/40">
+          <div className="border-t  border-zinc-700/40 pb-16 pt-10">
             <Container.Inner>
               <div className="flex flex-col items-center justify-between gap-6 sm:flex-row">
-                <div className="flex flex-wrap justify-center gap-x-6 gap-y-1 text-sm font-medium text-zinc-800 dark:text-zinc-200">
+                <div className="flex flex-wrap justify-center gap-x-6 gap-y-1 text-sm font-medium text-zinc-200">
                   <NavLink href="/">Home</NavLink>
                   <NavLink href="/documentation">Documentation</NavLink>
                   <NavLink href="/releases">Releases</NavLink>
@@ -50,7 +50,7 @@ export function Footer() {
                     Discord
                   </NavLink>
                 </div>
-                <p className="text-sm text-zinc-400 dark:text-zinc-500">
+                <p className="text-sm text-zinc-500">
                   &copy; {new Date().getFullYear()} Sparckles OSS. All rights
                   reserved.
                 </p>

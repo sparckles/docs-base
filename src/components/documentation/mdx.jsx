@@ -33,8 +33,8 @@ function InfoIcon(props) {
 
 export function Note({ children }) {
   return (
-    <div className="my-6 flex gap-2.5 rounded-2xl border border-orange-500/20 bg-orange-50/50 p-4 leading-6 text-orange-900 dark:border-orange-500/30 dark:bg-orange-500/5 dark:text-orange-200 dark:[--tw-prose-links-hover:theme(colors.orange.300)] dark:[--tw-prose-links:theme(colors.white)]">
-      <InfoIcon className="mt-1 h-4 w-4 flex-none fill-orange-500 stroke-white dark:fill-orange-200/20 dark:stroke-orange-200" />
+    <div className="my-6 flex gap-2.5 rounded-2xl border  border-orange-500/30 bg-orange-500/5 p-4 leading-6 text-orange-200 [--tw-prose-links-hover:theme(colors.orange.300)] [--tw-prose-links:theme(colors.white)]">
+      <InfoIcon className="mt-1 h-4 w-4 flex-none fill-orange-200/20 stroke-orange-200" />
       <div className="[&>:first-child]:mt-0 [&>:last-child]:mb-0">
         {children}
       </div>
@@ -68,7 +68,7 @@ export function Properties({ children }) {
     <div className="my-6">
       <ul
         role="list"
-        className="m-0 max-w-[calc(theme(maxWidth.lg)-theme(spacing.8))] list-none divide-y divide-zinc-900/5 p-0 dark:divide-white/5"
+        className="m-0 max-w-[calc(theme(maxWidth.lg)-theme(spacing.8))] list-none divide-y divide-white/5 p-0"
       >
         {children}
       </ul>
@@ -85,9 +85,7 @@ export function Property({ name, type, children }) {
           <code>{name}</code>
         </dd>
         <dt className="sr-only">Type</dt>
-        <dd className="font-mono text-xs text-zinc-400 dark:text-zinc-500">
-          {type}
-        </dd>
+        <dd className="font-mono text-xs text-zinc-500">{type}</dd>
         <dt className="sr-only">Description</dt>
         <dd className="w-full flex-none [&>:first-child]:mt-0 [&>:last-child]:mb-0">
           {children}

@@ -26,7 +26,7 @@ export function H2(props) {
 
 export const img = function Img(props) {
   return (
-    <div className="relative mt-8 overflow-hidden rounded-xl bg-gray-50 dark:bg-gray-900 [&+*]:mt-8">
+    <div className="relative mt-8 overflow-hidden rounded-xl bg-gray-900 [&+*]:mt-8">
       <Image
         alt=""
         sizes="(min-width: 1280px) 36rem, (min-width: 1024px) 45vw, (min-width: 640px) 32rem, 95vw"
@@ -65,7 +65,7 @@ function ArticleHeader({ id, date }) {
           <Link href={`#${id}`} className="inline-flex">
             <FormattedDate
               date={date}
-              className="text-2xs/4 font-medium text-gray-500 dark:text-white/50"
+              className="text-2xs/4 font-medium text-white/50"
             />
           </Link>
         </div>

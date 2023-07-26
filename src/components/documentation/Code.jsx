@@ -63,7 +63,7 @@ function CopyButton({ code }) {
         'group/button text-2xs absolute right-4 top-3.5 overflow-hidden rounded-full py-1 pl-2 pr-3 font-medium opacity-0 backdrop-blur transition focus:opacity-100 group-hover:opacity-100',
         copied
           ? 'bg-orange-400/10 ring-1 ring-inset ring-orange-400/20'
-          : 'hover:bg-white/7.5 dark:bg-white/2.5 bg-white/5 dark:hover:bg-white/5'
+          : 'bg-white/2.5 hover:bg-white/5'
       )}
       onClick={() => {
         window.navigator.clipboard.writeText(code).then(() => {
@@ -100,7 +100,7 @@ function CodePanelHeader({ tag, label }) {
   }
 
   return (
-    <div className="border-b-white/7.5 bg-white/2.5 dark:bg-white/1 flex h-9 items-center gap-2 border-y border-t-transparent bg-zinc-900 px-4 dark:border-b-white/5">
+    <div className="border-b-white/7.5 bg-white/1 flex h-9 items-center gap-2 border-y border-b-white/5 border-t-transparent bg-zinc-900 px-4">
       {tag && (
         <div className="dark flex">
           <Tag variant="small">{tag}</Tag>
@@ -120,7 +120,7 @@ function CodePanel({ tag, label, code, children }) {
   let child = Children.only(children)
 
   return (
-    <div className="dark:bg-white/2.5 group">
+    <div className="bg-white/2.5 group">
       <CodePanelHeader
         tag={child.props.tag ?? tag}
         label={child.props.label ?? label}
@@ -141,7 +141,7 @@ function CodeGroupHeader({ title, children, selectedIndex }) {
   }
 
   return (
-    <div className="flex min-h-[calc(theme(spacing.12)+1px)] flex-wrap items-start gap-x-4 border-b border-zinc-700 bg-zinc-800 px-4 dark:border-zinc-800 dark:bg-transparent">
+    <div className="flex min-h-[calc(theme(spacing.12)+1px)] flex-wrap items-start gap-x-4 border-b  border-zinc-800 bg-transparent bg-zinc-800 px-4">
       {title && (
         <h3 className="mr-auto pt-3 text-xs font-semibold text-white">
           {title}
@@ -265,7 +265,7 @@ export function CodeGroup({ children, title, ...props }) {
     <CodeGroupContext.Provider value={true}>
       <Container
         {...containerProps}
-        className="not-prose my-6 overflow-hidden rounded-2xl bg-zinc-900 shadow-md dark:ring-1 dark:ring-white/10"
+        className="not-prose my-6 overflow-hidden rounded-2xl bg-zinc-900 shadow-md ring-1 ring-white/10"
       >
         <CodeGroupHeader title={title} {...headerProps}>
           {children}

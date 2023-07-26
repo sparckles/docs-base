@@ -16,7 +16,7 @@ function TopLevelNavItem({ href, children }) {
     <li>
       <Link
         href={href}
-        className="text-sm leading-5 text-zinc-600 transition hover:text-zinc-900 dark:text-zinc-400 dark:hover:text-white"
+        className="text-sm leading-5 text-zinc-400 transition hover:text-white"
       >
         {children}
       </Link>
@@ -49,7 +49,7 @@ export const BottomNavbar = forwardRef(function Header({ className }, ref) {
           <MobileNavigation />
         </div>
         <div className="flex items-center gap-5">
-          <div className="lg:dark:bg-white/15 hidden lg:block lg:h-5 lg:w-px lg:bg-zinc-900/10" />
+          <div className="lg:bg-white/15 hidden lg:block lg:h-5 lg:w-px" />
           <div className="flex gap-4"></div>
         </div>
       </motion.div>

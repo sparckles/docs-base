@@ -15,7 +15,7 @@ export function Layout({ children, sections = [] }) {
           layoutScroll
           className="contents lg:pointer-events-none lg:fixed lg:inset-0 lg:z-40 lg:flex"
         >
-          <div className="contents lg:pointer-events-auto lg:block lg:w-72 lg:overflow-y-auto lg:px-6 lg:pb-8 lg:dark:border-white/10 xl:w-80">
+          <div className="contents lg:pointer-events-auto lg:block lg:w-72 lg:overflow-y-auto lg:border-white/10 lg:px-6 lg:pb-8 xl:w-80">
             <BottomNavbar />
 
             <Navigation className="hidden lg:mt-32 lg:block" />
