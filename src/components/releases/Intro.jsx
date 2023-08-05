@@ -36,7 +36,6 @@ export function Intro() {
         All the latest Robyn releases,
         <span className="text-yellow-300"> right here.</span>
       </h1>
-      <SignUpForm />
       <div className="mt-8 flex flex-wrap justify-center gap-x-1 gap-y-3 sm:gap-x-2 lg:justify-start">
         <IconLink href="/documentation" icon={BookIcon} className="flex-none">
           Documentation
