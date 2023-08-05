@@ -467,10 +467,10 @@ export default function Home({ articles }) {
                 </div>
                 <div className="flex flex-col bg-white/5 p-8">
                   <dt className="text-sm font-semibold leading-6 text-gray-300">
-                    Paid out to creators
+                    Community Members
                   </dt>
                   <dd className="order-first text-3xl font-semibold tracking-tight text-white">
-                    $70M
+                    100+
                   </dd>
                 </div>
               </dl>
