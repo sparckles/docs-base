@@ -53,7 +53,7 @@ function useAutocomplete() {
                 queries: [
                   {
                     query,
-                    indexName: process.env.NEXT_PUBLIC_DOCSEARCH_INDEX_NAME,
+                    indexName: process.env.NEXT_PUBLIC_ALGOLIA_INDEX_NAME,
                     params: {
                       hitsPerPage: 5,
                       highlightPreTag:
