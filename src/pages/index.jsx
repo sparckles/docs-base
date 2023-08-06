@@ -436,45 +436,51 @@ export default function Home({ articles }) {
             <div className="mx-auto max-w-2xl lg:max-w-none">
               <div className="text-center">
                 <h2 className="text-3xl font-bold tracking-tight text-white sm:text-4xl">
-                  Some of our stats
+                  Sponsors!
                 </h2>
                 <p className="mt-4 text-lg leading-8 text-gray-300">
-                  Lorem ipsum dolor sit amet consect adipisicing possimus.
+                  Robyn is powered by these amazing people
                 </p>
               </div>
-              <dl className="mt-16 grid grid-cols-1 gap-0.5 overflow-hidden rounded-2xl text-center sm:grid-cols-2 lg:grid-cols-4">
-                <div className="flex flex-col bg-white/5 p-8">
-                  <dt className="text-sm font-semibold leading-6 text-gray-300">
+              <dl className="mt-16 grid grid-cols-1  gap-0.5 overflow-hidden rounded-2xl text-center sm:grid-cols-2 lg:grid-cols-3">
+                <div className="flex flex-col justify-center bg-white/5 p-8">
+                  {/* <dt className="text-sm font-semibold leading-6 text-gray-300">
                     PyPi installs
-                  </dt>
+                  </dt> */}
+                  <a href="https://www.digitalocean.com/?refcode=3f2b9fd4968d&utm_campaign=Referral_Invite&utm_medium=Referral_Program&utm_source=badge" target="_blank" rel="noopener noreferrer">
                   <dd className="order-first text-3xl font-semibold tracking-tight text-white">
-                    850,000+
+                    <img src="https://web-platforms.sfo2.cdn.digitaloceanspaces.com/WWW/Badge%201.svg" alt="Digital Ocean" />
                   </dd>
+                  </a>
                 </div>
-                <div className="flex flex-col bg-white/5 p-8">
-                  <dt className="text-sm font-semibold leading-6 text-gray-300">
+                <div className="flex flex-col justify-center  bg-white/5 p-8">
+                  {/* <dt className="text-sm font-semibold leading-6 text-gray-300">
                     Stars on Github
-                  </dt>
+                  </dt> */}
+                  <a href="https://github.com/appwrite" target="_blank" rel="noopener noreferrer">
                   <dd className="order-first text-3xl font-semibold tracking-tight text-white">
-                    2800+
+                    <img src="https://avatars.githubusercontent.com/u/25003669?s=200&v=4" alt="AppWrite" />
                   </dd>
+                  </a>
                 </div>
-                <div className="flex flex-col bg-white/5 p-8">
-                  <dt className="text-sm font-semibold leading-6 text-gray-300">
+                <div className="flex flex-col  bg-white/5 p-8">
+                  {/* <dt className="text-sm font-semibold leading-6 text-gray-300">
                     Community Contributors
-                  </dt>
+                  </dt> */}
+                  <a href="https://github.com/shivaylamba" target="_blank" rel="noopener noreferrer">
                   <dd className="order-first text-3xl font-semibold tracking-tight text-white">
-                    50+
+                    <img src="https://avatars.githubusercontent.com/u/19529592?v=4" alt="Shivay Lamba" className='rounded-full' />
                   </dd>
+                  </a>
                 </div>
-                <div className="flex flex-col bg-white/5 p-8">
+                {/* <div className="flex flex-col bg-white/5 p-8">
                   <dt className="text-sm font-semibold leading-6 text-gray-300">
                     Community Members
                   </dt>
                   <dd className="order-first text-3xl font-semibold tracking-tight text-white">
                     100+
                   </dd>
-                </div>
+                </div> */}
               </dl>
             </div>
           </div>
