@@ -157,8 +157,9 @@ export default function Community() {
                   Sparckles
                 </h2>
                 <p className="mt-6 text-lg leading-8 text-gray-300">
-                  Lorem ipsum dolor sit amet consect adipisicing elit. Possimus
-                  magnam voluptatum cupiditate veritatis in accusamus quisquam.
+                  Sparckles is an innovative open-source organization dedicated to enhancing the Python ecosystem by developing cutting-edge tools, fostering a vibrant community, and providing robust infrastructure solutions.
+
+
                 </p>
                 <div className="mt-10 flex">
                   <a
