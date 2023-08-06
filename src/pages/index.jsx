@@ -13,6 +13,7 @@ import {
 import hljs from 'highlight.js/lib/core'
 import python from 'highlight.js/lib/languages/python'
 import 'highlight.js/styles/tomorrow-night-blue.css'
+import Testimonials from '@/components/Testimonials'
 
 hljs.registerLanguage('python', python)
 
@@ -144,7 +145,7 @@ export default function Home({ articles }) {
           </div>
         </div>
       </Container>
-      <div className="py-24 sm:py-32">
+      {/* <div className="py-24 sm:py-32">
         <div className="mx-auto max-w-7xl px-6 lg:px-8">
           <div className="mx-auto grid max-w-lg grid-cols-4 items-center gap-x-8 gap-y-12 sm:max-w-xl sm:grid-cols-6 sm:gap-x-10 sm:gap-y-14 lg:mx-0 lg:max-w-none lg:grid-cols-5">
             <Image
@@ -184,7 +185,8 @@ export default function Home({ articles }) {
             />
           </div>
         </div>
-      </div>
+      </div> */}
+      <Testimonials />
       <Container></Container>
       <Container className="mt-9">
         <div className="mx-auto max-w-7xl px-6 lg:px-8">
