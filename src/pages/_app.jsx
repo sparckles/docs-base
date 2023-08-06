@@ -47,15 +47,7 @@ export default function App({ Component, pageProps, router }) {
             <Component {...pageProps} />
           </Layout>
         </MDXProvider>
-        <Container className="bottom-2 w-full" style={{ position: 'fixed' }}>
-          <div className="flex justify-end md:flex-1">
-            <div className="pointer-events-auto">
-              <Link target="_blank" href="https://github.com/sparckles/robyn">
-                <GithubButton />
-              </Link>
-            </div>
-          </div>
-        </Container>
+        
       </>
     )
   } else if (router_.pathname.includes('release')) {
