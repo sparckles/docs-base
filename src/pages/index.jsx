@@ -436,51 +436,64 @@ export default function Home({ articles }) {
             <div className="mx-auto max-w-2xl lg:max-w-none">
               <div className="text-center">
                 <h2 className="text-3xl font-bold tracking-tight text-white sm:text-4xl">
-                  Sponsors!
+                Some of our stats
                 </h2>
                 <p className="mt-4 text-lg leading-8 text-gray-300">
-                  Robyn is powered by these amazing people
+                  Robyn is going strong!
                 </p>
               </div>
-              <dl className="mt-16 grid grid-cols-1  gap-0.5 overflow-hidden rounded-2xl text-center sm:grid-cols-2 lg:grid-cols-3">
+              <dl className="mt-16 grid grid-cols-1  gap-0.5 overflow-hidden rounded-2xl text-center sm:grid-cols-2 lg:grid-cols-4">
                 <div className="flex flex-col justify-center bg-white/5 p-8">
-                  {/* <dt className="text-sm font-semibold leading-6 text-gray-300">
-                    PyPi installs
-                  </dt> */}
-                  <a href="https://www.digitalocean.com/?refcode=3f2b9fd4968d&utm_campaign=Referral_Invite&utm_medium=Referral_Program&utm_source=badge" target="_blank" rel="noopener noreferrer">
+                  <dt className="text-sm font-semibold leading-6 text-gray-300">
+                    Robyn installs
+                  </dt>
+                  {/* <a href="https://www.digitalocean.com/?refcode=3f2b9fd4968d&utm_campaign=Referral_Invite&utm_medium=Referral_Program&utm_source=badge" target="_blank" rel="noopener noreferrer">
                   <dd className="order-first text-3xl font-semibold tracking-tight text-white">
                     <img src="https://web-platforms.sfo2.cdn.digitaloceanspaces.com/WWW/Badge%201.svg" alt="Digital Ocean" />
                   </dd>
-                  </a>
+                  </a> */}
+
+                  <dd className="order-first text-3xl font-semibold tracking-tight text-white">
+                  85,000+
+                  </dd>
+
                 </div>
                 <div className="flex flex-col justify-center  bg-white/5 p-8">
-                  {/* <dt className="text-sm font-semibold leading-6 text-gray-300">
+                  <dt className="text-sm font-semibold leading-6 text-gray-300">
                     Stars on Github
-                  </dt> */}
-                  <a href="https://github.com/appwrite" target="_blank" rel="noopener noreferrer">
+                  </dt>
+                  {/* <a href="https://github.com/appwrite" target="_blank" rel="noopener noreferrer">
                   <dd className="order-first text-3xl font-semibold tracking-tight text-white">
                     <img src="https://avatars.githubusercontent.com/u/25003669?s=200&v=4" alt="AppWrite" />
                   </dd>
-                  </a>
+                  </a> */}
+
+                  <dd className="order-first text-3xl font-semibold tracking-tight text-white">
+                    8500+
+                  </dd>
+
                 </div>
                 <div className="flex flex-col  bg-white/5 p-8">
-                  {/* <dt className="text-sm font-semibold leading-6 text-gray-300">
+                  <dt className="text-sm font-semibold leading-6 text-gray-300">
                     Community Contributors
-                  </dt> */}
-                  <a href="https://github.com/shivaylamba" target="_blank" rel="noopener noreferrer">
+                  </dt>
+                  {/* <a href="https://github.com/shivaylamba" target="_blank" rel="noopener noreferrer">
                   <dd className="order-first text-3xl font-semibold tracking-tight text-white">
                     <img src="https://avatars.githubusercontent.com/u/19529592?v=4" alt="Shivay Lamba" className='rounded-full' />
                   </dd>
-                  </a>
+                  </a> */}
+                  <dd className="order-first text-3xl font-semibold tracking-tight text-white">
+                  850+
+                  </dd>
                 </div>
-                {/* <div className="flex flex-col bg-white/5 p-8">
+                <div className="flex flex-col bg-white/5 p-8">
                   <dt className="text-sm font-semibold leading-6 text-gray-300">
                     Community Members
                   </dt>
                   <dd className="order-first text-3xl font-semibold tracking-tight text-white">
-                    100+
+                    1000+
                   </dd>
-                </div> */}
+                </div>
               </dl>
             </div>
           </div>
