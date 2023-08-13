@@ -43,7 +43,7 @@ function ContentWrapper({ className, children }) {
       <div className="ml-10 lg:flex lg:w-full lg:justify-center ">
         <div
           className={clsx(
-            'mx-auto max-w-lg lg:mx-0 lg:w-0 lg:max-w-xl lg:flex-auto text-white/40   ',
+            'mx-auto max-w-lg lg:mx-0 lg:w-0 lg:max-w-xl lg:flex-auto text-[#666666]   ',
             className
           )}
         >

@@ -207,7 +207,7 @@ export default function Community() {
                   </dt>
                   <a href="https://www.digitalocean.com/?refcode=3f2b9fd4968d&utm_campaign=Referral_Invite&utm_medium=Referral_Program&utm_source=badge" target="_blank" rel="noopener noreferrer">
                   <dd className=" text-3xl font-semibold tracking-tight text-white">
-                    <img src="https://outwittrade.com/wp-content/uploads/2021/01/digitalocean-logo.png" alt="Digital Ocean" className='aspect-square  rounded-full' />
+                    <img src="https://opensource.nyc3.cdn.digitaloceanspaces.com/attribution/assets/SVG/DO_Logo_vertical_blue.svg" alt="Digital Ocean" className='aspect-square  ' />
                   </dd>
                   </a>
 
