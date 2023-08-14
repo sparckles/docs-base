@@ -454,7 +454,7 @@ export default function Home({ articles }) {
                   </a> */}
 
                   <dd className="order-first text-3xl font-semibold tracking-tight text-white">
-                  85,000+
+                  980,000+
                   </dd>
 
                 </div>
@@ -469,7 +469,7 @@ export default function Home({ articles }) {
                   </a> */}
 
                   <dd className="order-first text-3xl font-semibold tracking-tight text-white">
-                    8500+
+                    2,900+
                   </dd>
 
                 </div>
@@ -483,7 +483,7 @@ export default function Home({ articles }) {
                   </dd>
                   </a> */}
                   <dd className="order-first text-3xl font-semibold tracking-tight text-white">
-                  850+
+                  50+
                   </dd>
                 </div>
                 <div className="flex flex-col bg-white/5 p-8">
@@ -491,7 +491,7 @@ export default function Home({ articles }) {
                     Community Members
                   </dt>
                   <dd className="order-first text-3xl font-semibold tracking-tight text-white">
-                    1000+
+                    100+
                   </dd>
                 </div>
               </dl>
