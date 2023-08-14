@@ -40,6 +40,30 @@ Batman was excited to learn that he could add events as functions as well as dec
 <Row>
 
   <Col>
+    For an synchronous request, Batman used:
+  </Col>
+  <Col sticky>
+    <CodeGroup title="Request" tag="GET" label="/hello_world">
+
+      ```python {{ title: 'untyped' }}
+      @app.get("/")
+      def h(request):
+          return "Hello, world"
+
+      ```
+
+      ```python {{title: 'typed'}}
+      @app.get("/")
+      def h(request: Request) -> str:
+          return "Hello, world"
+
+      ```
+    </CodeGroup>
+  </Col>
+</Row>
+<Row>
+
+  <Col>
     For an asynchronous request, Batman used:
   </Col>
   <Col sticky>
