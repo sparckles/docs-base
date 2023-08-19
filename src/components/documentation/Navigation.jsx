@@ -229,6 +229,14 @@ export const navigation = [
         title: 'Getting Started',
       },
       {
+        href: '/documentation/api_reference/architecture',
+        title: 'Architecture',
+      },
+      {
+        href: '/documentation/api_reference/comparison',
+        title: 'Comparison',
+      },
+      {
         href: '/documentation/api_reference/request_object',
         title: 'The Request Object',
       },
@@ -268,6 +276,22 @@ export const navigation = [
       {
         href: '/documentation/api_reference/exceptions',
         title: 'Exceptions',
+      },
+      {
+        href: '/documentation/api_reference/community-resources',
+        title: 'Community Resources',
+      },
+      {
+        href: '/documentation/api_reference/graphql-support',
+        title: 'GraphQL Support',
+      },
+      {
+        href: '/documentation/api_reference/hosting',
+        title: 'Hosting',
+      },
+      {
+        href: '/documentation/api_reference/future-roadmap',
+        title: 'Future Roadmap',
       },
 
       {
