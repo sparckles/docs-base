@@ -278,28 +278,55 @@ export const navigation = [
         title: 'Exceptions',
       },
       {
-        href: '/documentation/api_reference/community-resources',
-        title: 'Community Resources',
-      },
-      {
         href: '/documentation/api_reference/graphql-support',
         title: 'GraphQL Support',
       },
+    ],
+  },
+  {
+    title: 'Community Resources',
+    links: [
       {
-        href: '/documentation/api_reference/hosting',
-        title: 'Hosting',
+        href: '/documentation/api_reference/community-resources#talks',
+        title: 'Talks',
       },
       {
-        href: '/documentation/api_reference/future-roadmap',
-        title: 'Future Roadmap',
-      },
-
-      {
-        href: '/documentation/api_reference/advanced-features',
-        title: 'Advanced Features',
+        href: '/documentation/api_reference/community-resources#blogs',
+        title: 'Blogs',
       },
     ],
   },
+  {
+    title: 'Hosting',
+    links: [
+      {
+        href: '/documentation/api_reference/hosting#railway',
+        title: 'Railway',
+      },
+      {
+        href: '/documentation/api_reference/hosting#exposing-ports',
+        title: 'Exposing Ports',
+      },
+    ],
+  },
+  {
+    title: 'Future Roadmap',
+    links: [
+      {
+        href: '/documentation/api_reference/future-roadmap',
+        title: 'Upcoming Features',
+      },
+    ],
+  },
+  {
+    title: 'Advanced Features',
+    links: [
+      {
+        href: '/documentation/api_reference/advanced-features#keep-a-track-of-clients-ip-address',
+        title: 'Client IP Address',
+      },
+    ],
+  }
 ]
 
 export function Navigation(props) {
