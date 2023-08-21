@@ -281,6 +281,10 @@ export const navigation = [
         href: '/documentation/api_reference/graphql-support',
         title: 'GraphQL Support',
       },
+      {
+        href: '/documentation/api_reference/advanced-features#keep-a-track-of-clients-ip-address',
+        title: 'Client IP Address',
+      },
     ],
   },
   {
@@ -318,15 +322,6 @@ export const navigation = [
       },
     ],
   },
-  {
-    title: 'Advanced Features',
-    links: [
-      {
-        href: '/documentation/api_reference/advanced-features#keep-a-track-of-clients-ip-address',
-        title: 'Client IP Address',
-      },
-    ],
-  }
 ]
 
 export function Navigation(props) {
