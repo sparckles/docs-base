@@ -77,7 +77,7 @@ export function ApiDocs() {
   return (
     <div className="my-16 xl:max-w-none">
       <Heading level={2} id="api_docs">
-        Api Docs
+       <h3 className='text-white'>Api Docs</h3>
       </Heading>
       <div className="not-prose mt-4 grid grid-cols-1 gap-8 border-t border-white/5 pt-10 sm:grid-cols-2 xl:grid-cols-4">
         {guides.map((guide) => (

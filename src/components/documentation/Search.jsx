@@ -7,8 +7,8 @@ import algoliasearch from 'algoliasearch/lite'
 import clsx from 'clsx'
 
 const searchClient = algoliasearch(
-  process.env.NEXT_PUBLIC_DOCSEARCH_APP_ID,
-  process.env.NEXT_PUBLIC_DOCSEARCH_API_KEY
+  process.env.NEXT_PUBLIC_ALGOLIA_APP_ID,
+  process.env.NEXT_PUBLIC_ALGOLIA_API_KEY
 )
 
 function useAutocomplete() {
@@ -53,7 +53,7 @@ function useAutocomplete() {
                 queries: [
                   {
                     query,
-                    indexName: process.env.NEXT_PUBLIC_DOCSEARCH_INDEX_NAME,
+                    indexName: process.env.NEXT_PUBLIC_ALGOLIA_INDEX_NAME,
                     params: {
                       hitsPerPage: 5,
                       highlightPreTag:

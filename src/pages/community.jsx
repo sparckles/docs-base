@@ -157,8 +157,9 @@ export default function Community() {
                   Sparckles
                 </h2>
                 <p className="mt-6 text-lg leading-8 text-gray-300">
-                  Lorem ipsum dolor sit amet consect adipisicing elit. Possimus
-                  magnam voluptatum cupiditate veritatis in accusamus quisquam.
+                  Sparckles is an innovative open-source organization dedicated to enhancing the Python ecosystem by developing cutting-edge tools, fostering a vibrant community, and providing robust infrastructure solutions.
+
+
                 </p>
                 <div className="mt-10 flex">
                   <a
@@ -186,6 +187,77 @@ export default function Community() {
             />
           </div>
         </div>
+
+        {/* sponsors */}
+        <div className="py-24 sm:py-32">
+          <div className="mx-auto max-w-7xl px-6 lg:px-8">
+            <div className="mx-auto max-w-2xl lg:max-w-none">
+              <div className="text-center">
+                <h2 className="text-3xl font-bold tracking-tight text-white sm:text-4xl">
+                Sponsors!
+                </h2>
+                <p className="mt-4 text-lg leading-8 text-gray-300">
+                  Thanks to our sponsors for supporting us!
+                </p>
+              </div>
+              <dl className="mt-16 grid grid-cols-1  gap-0.5 overflow-hidden rounded-2xl text-center sm:grid-cols-2 lg:grid-cols-3">
+                <div className="flex flex-col justify-center justify-items-center bg-white/5 p-8">
+                  <dt className="text-sm font-semibold leading-6 text-gray-300">
+                    {/* Robyn installs */}
+                  </dt>
+                  <a href="https://www.digitalocean.com/?refcode=3f2b9fd4968d&utm_campaign=Referral_Invite&utm_medium=Referral_Program&utm_source=badge" target="_blank" rel="noopener noreferrer">
+                  <dd className=" text-3xl font-semibold tracking-tight text-white">
+                    <img src="https://opensource.nyc3.cdn.digitaloceanspaces.com/attribution/assets/SVG/DO_Logo_vertical_blue.svg" alt="Digital Ocean" className='aspect-square  ' />
+                  </dd>
+                  </a>
+
+                  {/* <dd className="order-first text-3xl font-semibold tracking-tight text-white">
+                  85,000+
+                  </dd> */}
+
+                </div>
+                <div className="flex flex-col justify-center   bg-white/5 p-8">
+                  <dt className="text-sm font-semibold leading-6 text-gray-300">
+                    {/* Stars on Github */}
+                  </dt>
+                  <a href="https://github.com/appwrite" target="_blank" rel="noopener noreferrer">
+                  <dd className=" text-3xl font-semibold tracking-tight text-white">
+                    <img src="https://pbs.twimg.com/profile_images/1569586501335359494/4rq0Hb99_400x400.jpg" alt="AppWrite" className='rounded-full' />
+                  </dd>
+                  </a>
+
+                  {/* <dd className="order-first text-3xl font-semibold tracking-tight text-white">
+                    8500+
+                  </dd> */}
+
+                </div>
+                <div className="flex flex-col justify-center justify-items-center  bg-white/5 p-8">
+                  <dt className="text-sm font-semibold leading-6 text-gray-300">
+                    {/* Community Contributors */}
+                  </dt>
+                  <a href="https://github.com/shivaylamba" target="_blank" rel="noopener noreferrer">
+                  <dd className=" text-3xl font-semibold tracking-tight text-white">
+                    <img src="https://avatars.githubusercontent.com/u/19529592?v=4" alt="Shivay Lamba" className='rounded-full ' />
+                  </dd>
+                  </a>
+                  {/* <dd className="order-first text-3xl font-semibold tracking-tight text-white">
+                  850+
+                  </dd> */}
+                </div>
+                {/* <div className="flex flex-col bg-white/5 p-8">
+                  <dt className="text-sm font-semibold leading-6 text-gray-300">
+                    Community Members
+                  </dt>
+                  <dd className="order-first text-3xl font-semibold tracking-tight text-white">
+                    1000+
+                  </dd>
+                </div> */}
+              </dl>
+            </div>
+          </div>
+        </div>
+
+
       </main>
     </>
   )
