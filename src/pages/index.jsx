@@ -258,7 +258,7 @@ export default function Home({ articles }) {
                     clip-rule="evenodd"
                   />
                 </svg>
-                Simplified API.
+                Simple API.
               </dt>
               <dd className="inline">
                 With Robyn, complexity takes a backseat. Our API is simple yet
@@ -280,12 +280,14 @@ export default function Home({ articles }) {
                     clip-rule="evenodd"
                   />
                 </svg>
-                Flexible Design.
+                Hacker Friendly.
               </dt>
               <dd className="inline">
-                Robyn supports both sync and async functions. This provides you
-                the freedom to architect your applications to best suit your
-                project requirements.
+                While many focus on large-scale challenges that many of us might
+                never encounter, Robyn prioritizes the broader issues most
+                developers face. We foster innovation for all, ensuring both
+                common and complex challenges are met with expertise. At Robyn,
+                every developer feels at home.
               </dd>
             </div>
             <div className="relative pl-9">
@@ -348,83 +350,12 @@ export default function Home({ articles }) {
                     clip-rule="evenodd"
                   />
                 </svg>
-                Customizable Workflows.
-              </dt>
-              <dd className="inline">
-                With middleware support, Robyn offers you a way to define your
-                request-response workflows precisely. This level of
-                customization enhances functionality like error handling and
-                request modification.
-              </dd>
-            </div>
-            <div className="relative pl-9">
-              <dt className="inline font-semibold text-white">
-                <svg
-                  className="absolute left-1 top-1 h-5 w-5 text-yellow-500"
-                  viewBox="0 0 20 20"
-                  fill="currentColor"
-                  aria-hidden="true"
-                >
-                  <path d="M4.632 3.533A2 2 0 016.577 2h6.846a2 2 0 011.945 1.533l1.976 8.234A3.489 3.489 0 0016 11.5H4c-.476 0-.93.095-1.344.267l1.976-8.234z" />
-                  <path
-                    fill-rule="evenodd"
-                    d="M4 13a2 2 0 100 4h12a2 2 0 100-4H4zm11.24 2a.75.75 0 01.75-.75H16a.75.75 0 01.75.75v.01a.75.75 0 01-.75.75h-.01a.75.75 0 01-.75-.75V15zm-2.25-.75a.75.75 0 00-.75.75v.01c0 .414.336.75.75.75H13a.75.75 0 00.75-.75V15a.75.75 0 00-.75-.75h-.01z"
-                    clip-rule="evenodd"
-                  />
-                </svg>
-                Productivity Boost.
-              </dt>
-              <dd className="inline">
-                Robyn's hot reloading feature eliminates the need for manual
-                server restarts, displaying your changes in real-time, and
-                speeding up your development process.
-              </dd>
-            </div>
-            <div className="relative pl-9">
-              <dt className="inline font-semibold text-white">
-                <svg
-                  className="absolute left-1 top-1 h-5 w-5 text-yellow-500"
-                  viewBox="0 0 20 20"
-                  fill="currentColor"
-                  aria-hidden="true"
-                >
-                  <path d="M4.632 3.533A2 2 0 016.577 2h6.846a2 2 0 011.945 1.533l1.976 8.234A3.489 3.489 0 0016 11.5H4c-.476 0-.93.095-1.344.267l1.976-8.234z" />
-                  <path
-                    fill-rule="evenodd"
-                    d="M4 13a2 2 0 100 4h12a2 2 0 100-4H4zm11.24 2a.75.75 0 01.75-.75H16a.75.75 0 01.75.75v.01a.75.75 0 01-.75.75h-.01a.75.75 0 01-.75-.75V15zm-2.25-.75a.75.75 0 00-.75.75v.01c0 .414.336.75.75.75H13a.75.75 0 00.75-.75V15a.75.75 0 00-.75-.75h-.01z"
-                    clip-rule="evenodd"
-                  />
-                </svg>
                 Community First and Truly FOSS.
               </dt>
               <dd className="inline">
                 Rooted in a community-first ethos, Robyn is built with
                 collective effort and is a true representation of free and
                 open-source software.
-              </dd>
-            </div>
-            <div className="relative pl-9">
-              <dt className="inline font-semibold text-white">
-                <svg
-                  className="absolute left-1 top-1 h-5 w-5 text-yellow-500"
-                  viewBox="0 0 20 20"
-                  fill="currentColor"
-                  aria-hidden="true"
-                >
-                  <path d="M4.632 3.533A2 2 0 016.577 2h6.846a2 2 0 011.945 1.533l1.976 8.234A3.489 3.489 0 0016 11.5H4c-.476 0-.93.095-1.344.267l1.976-8.234z" />
-                  <path
-                    fill-rule="evenodd"
-                    d="M4 13a2 2 0 100 4h12a2 2 0 100-4H4zm11.24 2a.75.75 0 01.75-.75H16a.75.75 0 01.75.75v.01a.75.75 0 01-.75.75h-.01a.75.75 0 01-.75-.75V15zm-2.25-.75a.75.75 0 00-.75.75v.01c0 .414.336.75.75.75H13a.75.75 0 00.75-.75V15a.75.75 0 00-.75-.75h-.01z"
-                    clip-rule="evenodd"
-                  />
-                </svg>
-                Under Active Development!
-              </dt>
-              <dd className="inline">
-                The journey with Robyn is one of continuous evolution. Our team
-                of dedicated developers is tireless in ensuring that Robyn stays
-                updated, providing you with the latest technology and features
-                at your fingertips.
               </dd>
             </div>
           </dl>
@@ -436,7 +367,7 @@ export default function Home({ articles }) {
             <div className="mx-auto max-w-2xl lg:max-w-none">
               <div className="text-center">
                 <h2 className="text-3xl font-bold tracking-tight text-white sm:text-4xl">
-                Some of our stats
+                  Some of our stats
                 </h2>
                 <p className="mt-4 text-lg leading-8 text-gray-300">
                   Robyn is going strong!
@@ -454,9 +385,8 @@ export default function Home({ articles }) {
                   </a> */}
 
                   <dd className="order-first text-3xl font-semibold tracking-tight text-white">
-                  980,000+
+                    1 million+
                   </dd>
-
                 </div>
                 <div className="flex flex-col justify-center  bg-white/5 p-8">
                   <dt className="text-sm font-semibold leading-6 text-gray-300">
@@ -469,9 +399,8 @@ export default function Home({ articles }) {
                   </a> */}
 
                   <dd className="order-first text-3xl font-semibold tracking-tight text-white">
-                    2,900+
+                    2,9k+
                   </dd>
-
                 </div>
                 <div className="flex flex-col  bg-white/5 p-8">
                   <dt className="text-sm font-semibold leading-6 text-gray-300">
@@ -483,7 +412,7 @@ export default function Home({ articles }) {
                   </dd>
                   </a> */}
                   <dd className="order-first text-3xl font-semibold tracking-tight text-white">
-                  50+
+                    50+
                   </dd>
                 </div>
                 <div className="flex flex-col bg-white/5 p-8">
@@ -513,16 +442,16 @@ export default function Home({ articles }) {
               </p>
               <div className="mt-10 flex items-center justify-center gap-x-6">
                 <a
-                  href="/documentation"
+                  href="/documentation/example_app"
                   className="rounded-md bg-white px-3.5 py-2.5 text-sm font-semibold text-gray-900 shadow-sm hover:bg-gray-100 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white"
                 >
                   Get started
                 </a>
                 <a
-                  href="#"
+                  href="/documentation/api_reference"
                   className="text-sm font-semibold leading-6 text-white"
                 >
-                  Learn more <span aria-hidden="true">→</span>
+                  Read the docs <span aria-hidden="true">→</span>
                 </a>
               </div>
             </div>
