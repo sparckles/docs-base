@@ -91,11 +91,11 @@ function MobileNavigation(props) {
                 <MobileNavItem href="/documentation">
                   Documentation
                 </MobileNavItem>
+                <MobileNavItem href="/releases">Releases</MobileNavItem>
+                <MobileNavItem href="/community">Community</MobileNavItem>
                 <MobileNavItem href="https://github.com/sparckles/robyn">
                   GitHub
                 </MobileNavItem>
-                <MobileNavItem href="/releases">Releases</MobileNavItem>
-                <MobileNavItem href="/community">Community</MobileNavItem>
               </ul>
             </nav>
           </Popover.Panel>

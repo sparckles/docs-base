@@ -231,29 +231,6 @@ export default function Home({ articles }) {
                 >
                   <path
                     fill-rule="evenodd"
-                    d="M10 1a4.5 4.5 0 00-4.5 4.5V9H5a2 2 0 00-2 2v6a2 2 0 002 2h10a2 2 0 002-2v-6a2 2 0 00-2-2h-.5V5.5A4.5 4.5 0 0010 1zm3 8V5.5a3 3 0 10-6 0V9h6z"
-                    clip-rule="evenodd"
-                  />
-                </svg>
-                Extensible.{' '}
-              </dt>
-              <dd className="inline">
-                Robyn's structure is designed to adapt and grow alongside your
-                project. This flexibility lies at the core of our framework,
-                paving the way for a seamless extension of features as your
-                needs evolve.
-              </dd>
-            </div>
-            <div className="relative pl-9">
-              <dt className="inline font-semibold text-white">
-                <svg
-                  className="absolute left-1 top-1 h-5 w-5 text-yellow-500"
-                  viewBox="0 0 20 20"
-                  fill="currentColor"
-                  aria-hidden="true"
-                >
-                  <path
-                    fill-rule="evenodd"
                     d="M15.312 11.424a5.5 5.5 0 01-9.201 2.466l-.312-.311h2.433a.75.75 0 000-1.5H3.989a.75.75 0 00-.75.75v4.242a.75.75 0 001.5 0v-2.43l.31.31a7 7 0 0011.712-3.138.75.75 0 00-1.449-.39zm1.23-3.723a.75.75 0 00.219-.53V2.929a.75.75 0 00-1.5 0V5.36l-.31-.31A7 7 0 003.239 8.188a.75.75 0 101.448.389A5.5 5.5 0 0113.89 6.11l.311.31h-2.432a.75.75 0 000 1.5h4.243a.75.75 0 00.53-.219z"
                     clip-rule="evenodd"
                   />
@@ -288,50 +265,6 @@ export default function Home({ articles }) {
                 developers face. We foster innovation for all, ensuring both
                 common and complex challenges are met with expertise. At Robyn,
                 every developer feels at home.
-              </dd>
-            </div>
-            <div className="relative pl-9">
-              <dt className="inline font-semibold text-white">
-                <svg
-                  className="absolute left-1 top-1 h-5 w-5 text-yellow-500"
-                  viewBox="0 0 20 20"
-                  fill="currentColor"
-                  aria-hidden="true"
-                >
-                  <path
-                    fill-rule="evenodd"
-                    d="M7.84 1.804A1 1 0 018.82 1h2.36a1 1 0 01.98.804l.331 1.652a6.993 6.993 0 011.929 1.115l1.598-.54a1 1 0 011.186.447l1.18 2.044a1 1 0 01-.205 1.251l-1.267 1.113a7.047 7.047 0 010 2.228l1.267 1.113a1 1 0 01.206 1.25l-1.18 2.045a1 1 0 01-1.187.447l-1.598-.54a6.993 6.993 0 01-1.929 1.115l-.33 1.652a1 1 0 01-.98.804H8.82a1 1 0 01-.98-.804l-.331-1.652a6.993 6.993 0 01-1.929-1.115l-1.598.54a1 1 0 01-1.186-.447l-1.18-2.044a1 1 0 01.205-1.251l1.267-1.114a7.05 7.05 0 010-2.227L1.821 7.773a1 1 0 01-.206-1.25l1.18-2.045a1 1 0 011.187-.447l1.598.54A6.993 6.993 0 017.51 3.456l.33-1.652zM10 13a3 3 0 100-6 3 3 0 000 6z"
-                    clip-rule="evenodd"
-                  />
-                </svg>
-                Dynamic Navigation.
-              </dt>
-              <dd className="inline">
-                Robyn ensures efficient navigation within your application with
-                dynamic URL routing, empowering you with full control over your
-                application's flow.
-              </dd>
-            </div>
-            <div className="relative pl-9">
-              <dt className="inline font-semibold text-white">
-                <svg
-                  className="absolute left-1 top-1 h-5 w-5 text-yellow-500"
-                  viewBox="0 0 20 20"
-                  fill="currentColor"
-                  aria-hidden="true"
-                >
-                  <path d="M4.632 3.533A2 2 0 016.577 2h6.846a2 2 0 011.945 1.533l1.976 8.234A3.489 3.489 0 0016 11.5H4c-.476 0-.93.095-1.344.267l1.976-8.234z" />
-                  <path
-                    fill-rule="evenodd"
-                    d="M4 13a2 2 0 100 4h12a2 2 0 100-4H4zm11.24 2a.75.75 0 01.75-.75H16a.75.75 0 01.75.75v.01a.75.75 0 01-.75.75h-.01a.75.75 0 01-.75-.75V15zm-2.25-.75a.75.75 0 00-.75.75v.01c0 .414.336.75.75.75H13a.75.75 0 00.75-.75V15a.75.75 0 00-.75-.75h-.01z"
-                    clip-rule="evenodd"
-                  />
-                </svg>
-                Real-time Communication.{' '}
-              </dt>
-              <dd className="inline">
-                Robyn offers built-in support for WebSockets, enabling swift,
-                two-way interaction between the client and server.
               </dd>
             </div>
 

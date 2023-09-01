@@ -98,17 +98,6 @@ export default function Community() {
                   Our Amazing Contributors
                 </h2>
                 <Contributors />
-                <p className="mt-6 text-lg leading-8 text-gray-300">
-                  And many more at...
-                </p>
-                <div className="mt-10 flex">
-                  <a
-                    href="https://github.com/sparckles/robyn"
-                    className="text-sm font-semibold leading-6 text-indigo-400"
-                  >
-                    Our homepage <span aria-hidden="true">&rarr;</span>
-                  </a>
-                </div>
               </div>
             </div>
           </div>
@@ -126,6 +115,17 @@ export default function Community() {
               innovation and progress. Together, we can create a brighter future
               for the Python ecosystem and the global software community.
             </p>
+
+            <div className="mt-10 flex">
+              <a
+                href="https://discord.com/invite/rkERZ5eNU8"
+                target="_blank"
+                rel="noreferrer"
+                className="text-sm font-semibold leading-6 text-indigo-400"
+              >
+                Join our community! <span aria-hidden="true">&rarr;</span>
+              </a>
+            </div>
           </div>
         </div>
 
@@ -136,8 +136,9 @@ export default function Community() {
               Our team
             </h2>
             <p className="mt-6 text-lg leading-8 text-gray-300">
-              We are a group of developers passionate about the open source
-              community. Come join us and help us empower the Python web
+              Robyn is housed under an open source orgranisation called
+              Sparckles. We are a group of developers passionate about the open
+              source community. Come join us and help us empower the Python web
               ecosystem.
             </p>
           </div>
@@ -146,9 +147,9 @@ export default function Community() {
         {/* CTA section */}
         <div className="relative isolate -z-10 mt-32 sm:mt-40">
           <div className="mx-auto max-w-7xl sm:px-6 lg:px-8">
-            <div className="mx-auto flex max-w-2xl flex-col gap-16 bg-white/5 px-6 py-16 ring-1 ring-white/10 sm:rounded-3xl sm:p-8 lg:mx-0 lg:max-w-none lg:flex-row lg:items-center lg:py-20 xl:gap-x-20 xl:px-20">
+            <div className="mx-10 flex max-w-2xl flex-col gap-16 bg-white/5 px-6 py-16 ring-1 ring-white/10 sm:rounded-3xl sm:p-8 md:mx-auto lg:mx-0 lg:max-w-none lg:flex-row lg:items-center lg:py-20 xl:gap-x-20 xl:px-20">
               <Image
-                className="h-96 w-full flex-none rounded-2xl object-cover shadow-xl lg:aspect-square lg:h-auto lg:max-w-sm"
+                className="h-96 w-full flex-none rounded-2xl object-cover shadow-xl  lg:aspect-square lg:h-auto lg:max-w-sm"
                 src={sparcklesLogo}
                 alt="sparckles logo"
               />
@@ -157,9 +158,10 @@ export default function Community() {
                   Sparckles
                 </h2>
                 <p className="mt-6 text-lg leading-8 text-gray-300">
-                  Sparckles is an innovative open-source organization dedicated to enhancing the Python ecosystem by developing cutting-edge tools, fostering a vibrant community, and providing robust infrastructure solutions.
-
-
+                  Sparckles is an innovative open-source organization dedicated
+                  to enhancing the Python ecosystem by developing cutting-edge
+                  tools, fostering a vibrant community, and providing robust
+                  infrastructure solutions.
                 </p>
                 <div className="mt-10 flex">
                   <a
@@ -194,70 +196,66 @@ export default function Community() {
             <div className="mx-auto max-w-2xl lg:max-w-none">
               <div className="text-center">
                 <h2 className="text-3xl font-bold tracking-tight text-white sm:text-4xl">
-                Sponsors!
+                  Sponsors
                 </h2>
                 <p className="mt-4 text-lg leading-8 text-gray-300">
                   Thanks to our sponsors for supporting us!
                 </p>
               </div>
-              <dl className="mt-16 grid grid-cols-1  gap-0.5 overflow-hidden rounded-2xl text-center sm:grid-cols-2 lg:grid-cols-3">
+              <dl className="mx-10 mt-16 grid max-w-screen-xl grid-cols-1 gap-0.5 overflow-hidden rounded-2xl text-center sm:mx-10 sm:grid-cols-2 lg:grid-cols-3">
                 <div className="flex flex-col justify-center justify-items-center bg-white/5 p-8">
-                  <dt className="text-sm font-semibold leading-6 text-gray-300">
-                    {/* Robyn installs */}
-                  </dt>
-                  <a href="https://www.digitalocean.com/?refcode=3f2b9fd4968d&utm_campaign=Referral_Invite&utm_medium=Referral_Program&utm_source=badge" target="_blank" rel="noopener noreferrer">
-                  <dd className=" text-3xl font-semibold tracking-tight text-white">
-                    <img src="https://opensource.nyc3.cdn.digitaloceanspaces.com/attribution/assets/SVG/DO_Logo_vertical_blue.svg" alt="Digital Ocean" className='aspect-square  ' />
-                  </dd>
+                  <a
+                    href="https://www.digitalocean.com/?refcode=3f2b9fd4968d&utm_campaign=Referral_Invite&utm_medium=Referral_Program&utm_source=badge"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <dd className=" text-3xl font-semibold tracking-tight text-white">
+                      <img
+                        src="https://opensource.nyc3.cdn.digitaloceanspaces.com/attribution/assets/SVG/DO_Logo_vertical_blue.svg"
+                        alt="Digital Ocean"
+                        className="aspect-square  "
+                      />
+                    </dd>
                   </a>
-
-                  {/* <dd className="order-first text-3xl font-semibold tracking-tight text-white">
-                  85,000+
-                  </dd> */}
-
                 </div>
                 <div className="flex flex-col justify-center   bg-white/5 p-8">
-                  <dt className="text-sm font-semibold leading-6 text-gray-300">
-                    {/* Stars on Github */}
-                  </dt>
-                  <a href="https://github.com/appwrite" target="_blank" rel="noopener noreferrer">
-                  <dd className=" text-3xl font-semibold tracking-tight text-white">
-                    <img src="https://pbs.twimg.com/profile_images/1569586501335359494/4rq0Hb99_400x400.jpg" alt="AppWrite" className='rounded-full' />
-                  </dd>
+                  <dt className="text-sm font-semibold leading-6 text-gray-300"></dt>
+                  <a
+                    href="https://github.com/appwrite"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <dd className=" text-3xl font-semibold tracking-tight text-white">
+                      <img
+                        src="https://pbs.twimg.com/profile_images/1569586501335359494/4rq0Hb99_400x400.jpg"
+                        alt="AppWrite"
+                        className="rounded-full"
+                      />
+                    </dd>
                   </a>
-
-                  {/* <dd className="order-first text-3xl font-semibold tracking-tight text-white">
-                    8500+
-                  </dd> */}
-
                 </div>
                 <div className="flex flex-col justify-center justify-items-center  bg-white/5 p-8">
                   <dt className="text-sm font-semibold leading-6 text-gray-300">
                     {/* Community Contributors */}
                   </dt>
-                  <a href="https://github.com/shivaylamba" target="_blank" rel="noopener noreferrer">
-                  <dd className=" text-3xl font-semibold tracking-tight text-white">
-                    <img src="https://avatars.githubusercontent.com/u/19529592?v=4" alt="Shivay Lamba" className='rounded-full ' />
-                  </dd>
+                  <a
+                    href="https://github.com/shivaylamba"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <dd className=" text-3xl font-semibold tracking-tight text-white">
+                      <img
+                        src="https://avatars.githubusercontent.com/u/19529592?v=4"
+                        alt="Shivay Lamba"
+                        className="rounded-full "
+                      />
+                    </dd>
                   </a>
-                  {/* <dd className="order-first text-3xl font-semibold tracking-tight text-white">
-                  850+
-                  </dd> */}
                 </div>
-                {/* <div className="flex flex-col bg-white/5 p-8">
-                  <dt className="text-sm font-semibold leading-6 text-gray-300">
-                    Community Members
-                  </dt>
-                  <dd className="order-first text-3xl font-semibold tracking-tight text-white">
-                    1000+
-                  </dd>
-                </div> */}
               </dl>
             </div>
           </div>
         </div>
-
-
       </main>
     </>
   )

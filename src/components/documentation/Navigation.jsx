@@ -278,12 +278,12 @@ export const navigation = [
         title: 'Exceptions',
       },
       {
-        href: '/documentation/api_reference/graphql-support',
-        title: 'GraphQL Support',
-      },
-      {
         href: '/documentation/api_reference/advanced-features#keep-a-track-of-clients-ip-address',
         title: 'Client IP Address',
+      },
+      {
+        href: '/documentation/api_reference/graphql-support',
+        title: 'GraphQL Support',
       },
     ],
   },
