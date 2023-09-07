@@ -1,3 +1,5 @@
+import { useEffect } from 'react'
+
 let testimonials = [
   {
     body: "Robyn has revolutionized the way I develop web solutions. Its seamless integration of Python's async capabilities with a Rust runtime not only ensures reliability and scalability but also provides quick project setup, a delightful user experience, and robust plugin support. With its exceptional speed and multithreaded efficiency, Robyn's real-time communication through WebSockets and dynamic URL routing has empowered me to create highly performant and interactive applications while maintaining full control over navigation and workflows. A game-changer for modern web development!",
@@ -111,7 +113,8 @@ const chunk = (arr, size) =>
   )
 
 export default function Testimonials() {
-  const chunkedTestimonials = chunk(
+  let chunkedTestimonials = []
+  chunkedTestimonials = chunk(
     testimonials.sort(() => 0.5 - Math.random()),
     3
   )
@@ -187,4 +190,3 @@ export default function Testimonials() {
     </div>
   )
 }
-

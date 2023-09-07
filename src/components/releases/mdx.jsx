@@ -43,7 +43,7 @@ function ContentWrapper({ className, children }) {
       <div className="ml-10 lg:flex lg:w-full lg:justify-center ">
         <div
           className={clsx(
-            'mx-auto max-w-lg lg:mx-0 lg:w-0 lg:max-w-xl lg:flex-auto text-gray-300 ',
+            'mx-auto max-w-lg break-words text-gray-300 lg:mx-0 lg:w-0 lg:max-w-xl lg:flex-auto ',
             className
           )}
         >
@@ -61,7 +61,7 @@ function ArticleHeader({ id, date }) {
         <div className="h-[0.0625rem] w-3.5 bg-gray-400 " />
       </div>
       <ContentWrapper>
-        <div className="flex">
+        <div className="flex flex-wrap">
           <Link href={`#${id}`} className="inline-flex">
             <FormattedDate
               date={date}
@@ -76,7 +76,7 @@ function ArticleHeader({ id, date }) {
 
 export function Article({ id, title, date, children }) {
   let { isFeed } = useFeed()
-  let heightRef = useRef()
+  let heightRef = useRef(null)
   let [heightAdjustment, setHeightAdjustment] = useState(0)
 
   useEffect(() => {
@@ -136,4 +136,8 @@ export const code = function Code({ highlightedCode, ...props }) {
   }
 
   return <code {...props} />
+}
+
+export const pre = function Pre({ children }) {
+  return <pre className="overflow-x-scroll">{children}</pre>
 }

@@ -10,10 +10,6 @@ import { a, wrapper, H2, img, Article, code } from '@/components/releases/mdx'
 
 import * as releaseMdxComponents from '@/components/releases/mdx'
 
-const customComponents = {
-  h2: H2,
-}
-
 const ChangelogPage = ({ releases }) => {
   return (
     <>
