@@ -84,7 +84,7 @@ let testimonials = [
       handle: 'joeyousss',
       imageUrl:
         'https://pbs.twimg.com/profile_images/1595447618707984385/XF3PQqTu_400x400.jpg',
-      title: 'Community Support Engineer at Appwrite',
+      title: 'Open Source Developer',
     },
   },
   // More testimonials...
