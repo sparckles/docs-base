@@ -1,7 +1,6 @@
 import { IconLink } from '@/components/releases/IconLink'
 import { SignUpForm } from '@/components/releases/SignUpForm'
 import {
-  GitHubIcon,
   InstagramIcon,
   LinkedInIcon,
   TwitterIcon,
