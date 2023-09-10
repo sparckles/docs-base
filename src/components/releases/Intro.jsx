@@ -1,5 +1,11 @@
 import { IconLink } from '@/components/releases/IconLink'
 import { SignUpForm } from '@/components/releases/SignUpForm'
+import {
+  GitHubIcon,
+  InstagramIcon,
+  LinkedInIcon,
+  TwitterIcon,
+} from '@/components/SocialIcons'
 
 function BookIcon(props) {
   return (
@@ -39,7 +45,7 @@ export function Intro() {
       <div className="mt-8 flex flex-wrap justify-start gap-x-1 gap-y-3 sm:gap-x-2">
         <IconLink
           href="https://twitter.com/robyn_oss"
-          icon={BookIcon}
+          icon={TwitterIcon}
           className="flex-none"
         >
           Twitter

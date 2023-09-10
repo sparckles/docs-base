@@ -82,6 +82,15 @@ export default function Home({ articles }) {
           content="Robyn - A Fast, Innovator Friendly, and Community Driven Python Web Framework.
 "
         />
+
+        <meta
+          property="og:title"
+          content="Robyn - A Fast, Innovator Friendly, and Community Driven Python Web Framework."
+        />
+        <meta
+          property="og:image"
+          content="https://beta.robyn.tech/RobynOG.svg"
+        />
       </Head>
 
       <Container className="mt-10 md:mt-14">
