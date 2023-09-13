@@ -89,7 +89,7 @@ export default function Home({ articles }) {
         />
         <meta
           property="og:image"
-          content="https://beta.robyn.tech/RobynOG.svg"
+          content="https://beta.robyn.tech/robynog.png"
         />
       </Head>
 
