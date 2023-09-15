@@ -237,7 +237,7 @@ Batman learned to customize response formats by returning dictionaries or using 
     async def dictionary(request):
         return {
             "status_code": 200,
-            "body": "This is a regular response",
+            "description": "This is a regular response",
             "type": "text",
             "headers": {"Header": "header_value"},
         }
@@ -249,7 +249,7 @@ Batman learned to customize response formats by returning dictionaries or using 
     async def dictionary(request):
         return {
             "status_code": 200,
-            "body": "This is a regular response",
+            "description": "This is a regular response",
             "type": "text",
             "headers": {"Header": "header_value"},
         }
@@ -275,7 +275,7 @@ To use the Response object, he wrote:
 
     @app.get("/response")
     async def response(request):
-        return Response(status_code=200, headers={}, body="OK")
+        return Response(status_code=200, headers={}, description="OK")
     ```
 
     ```python {{title: 'typed'}}
@@ -283,7 +283,7 @@ To use the Response object, he wrote:
 
     @app.get("/response")
     async def response(request):
-        return Response(status_code=200, headers={}, body="OK")
+        return Response(status_code=200, headers={}, description="OK")
 
     ```
     </CodeGroup>
@@ -306,7 +306,7 @@ Batman then wanted to return a binary output from his application. He could do t
         return Response(
             status_code=200,
             headers={"Content-Type": "application/octet-stream"},
-            body="OK",
+            description="OK",
         )
 
 
@@ -320,7 +320,7 @@ Batman then wanted to return a binary output from his application. He could do t
         return Response(
             status_code=200,
             headers={"Content-Type": "application/octet-stream"},
-            body="OK",
+            description="OK",
         )
     ```
 
@@ -330,7 +330,7 @@ Batman then wanted to return a binary output from his application. He could do t
         return Response(
             status_code=200,
             headers={"Content-Type": "application/octet-stream"},
-            body="OK",
+            description="OK",
         )
 
 
@@ -344,7 +344,7 @@ Batman then wanted to return a binary output from his application. He could do t
         return Response(
             status_code=200,
             headers={"Content-Type": "application/octet-stream"},
-            body="OK",
+            description="OK",
         )
     ```
     </CodeGroup>
@@ -376,7 +376,7 @@ Either, by using the `headers` field in the `Response` object:
         return Response(
             status_code=200,
             headers={"Content-Type": "application/octet-stream"},
-            body="OK",
+            description="OK",
         )
     ```
 
@@ -386,7 +386,7 @@ Either, by using the `headers` field in the `Response` object:
         return Response(
             status_code=200,
             headers={"Content-Type": "application/octet-stream"},
-            body="OK",
+            description="OK",
         )
 
     ```
@@ -502,7 +502,7 @@ After learning about response formats and headers, Batman learned to set status 
 
     @app.get("/response")
     async def response(request):
-        return Response(status_code=status_codes.HTTP_200_OK, headers={}, body="OK")
+        return Response(status_code=status_codes.HTTP_200_OK, headers={}, description="OK")
     ```
 
     ```python {{title: 'typed'}}
@@ -511,7 +511,7 @@ After learning about response formats and headers, Batman learned to set status 
 
     @app.get("/response")
     async def response(request):
-        return Response(status_code=status_codes.HTTP_200_OK, headers={}, body="OK")
+        return Response(status_code=status_codes.HTTP_200_OK, headers={}, description="OK")
     ```
     </CodeGroup>
   </Col>

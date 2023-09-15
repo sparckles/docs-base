@@ -102,7 +102,7 @@ async def add_crime(request):
         raise HTTPException(status_code=400, detail="Invalid crime data")
 
     return {
-        "body": "Crime added successfully",
+        "description": "Crime added successfully",
         "status_code": 200,
     }
 
