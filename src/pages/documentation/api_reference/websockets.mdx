@@ -34,9 +34,23 @@ To handle real-time communication, Batman learned how to work with WebSockets. H
     ```
 
     ```python {{title: 'typed'}}
-    @app.get("/")
-    def h(request: Request) -> str:
-        return "Hello, world"
+    from robyn import Robyn, jsonify, WS
+
+    app = Robyn(__file__)
+    websocket = WS(app, "/web_socket")
+
+    @websocket.on("message")
+    def connect():
+        return "Hello world, from ws"
+
+    @websocket.on("close")
+    def close():
+        return "Goodbye world, from ws"
+
+    @websocket.on("connect")
+    def message():
+        return "Connected to ws"
+
 
     ```
     </CodeGroup>
@@ -58,6 +72,8 @@ To handle real-time communication, Batman learned how to work with WebSockets. H
       ```
 
       ```python {{title: 'typed'}}
+      from robyn import Request
+
       @app.get("/")
       async def h(request: Request) -> str:
           return "Hello, world"

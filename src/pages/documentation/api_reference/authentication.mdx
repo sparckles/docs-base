@@ -56,7 +56,7 @@ As Batman found out, Robyn provides an easy way to add an authentication middlew
                 return Identity(claims={})
             return None
 
-    app.configure_authentication(BasicAuthHandler(token_getter=BearerGetter()))
+      app.configure_authentication(BasicAuthHandler(token_getter=BearerGetter()))
 
       ```
 
@@ -68,8 +68,7 @@ As Batman found out, Robyn provides an easy way to add an authentication middlew
                 return Identity(claims={})
             return None
 
-    app.configure_authentication(BasicAuthHandler(token_getter=BearerGetter()))
-
+      app.configure_authentication(BasicAuthHandler(token_getter=BearerGetter()))
 
       ```
     </CodeGroup>

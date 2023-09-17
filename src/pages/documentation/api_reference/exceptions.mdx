@@ -14,17 +14,16 @@ Batman scaled his application across multiple cores for better performance. He u
     <CodeGroup title="Request" tag="GET" label="/hello_world">
 
     ```python {{ title: 'untyped' }}
-    from robyn.robyn import HTTPException
-
-    @app.exception_handler(HTTPException)
-    def custom_error_handler(request, exc):
-        return Response(
-            status_code=exc.status_code,
-            headers={"content-type": "application/json"},
-            body=json.dumps({"detail": "Custom error handler"}),
-        )
+    @app.exception
+    def handle_exception(error):
+        return {"status_code": 500, "body": f"error msg: {error}"}
     ```
 
+    ```python {{ title: 'typed' }}
+    @app.exception
+    def handle_exception(error: Exception):
+        return {"status_code": 500, "body": f"error msg: {error}"}
+    ```
     </CodeGroup>
   </Col>
 </Row>

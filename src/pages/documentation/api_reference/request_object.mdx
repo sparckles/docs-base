@@ -54,7 +54,20 @@ identity (Optional[Identity]): The identity of the client
     @dataclass
     class Request:
       """
+      queries: dict[str, str]
+      headers: dict[str, str]
+      path_params: dict[str, str]
+      body: Union[str, bytes]
+      method: str
+      url: Url
+      ip_addr: Optional[str]
+      identity: Optional[Identity]
+      """
+    ```
 
+    ```python {{ title: 'typed' }}
+    @dataclass
+    class Request:
       """
       queries: dict[str, str]
       headers: dict[str, str]
@@ -64,8 +77,8 @@ identity (Optional[Identity]): The identity of the client
       url: Url
       ip_addr: Optional[str]
       identity: Optional[Identity]
+      """
     ```
-
     </CodeGroup>
   </Col>
 </Row>

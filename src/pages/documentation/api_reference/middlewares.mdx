@@ -32,7 +32,6 @@ Batman was excited to learn that he could add events as functions as well as dec
     def shutdown_handler():
         print("Shutting down")
 
-
     ```
     </CodeGroup>
   </Col>
@@ -54,6 +53,8 @@ Batman was excited to learn that he could add events as functions as well as dec
       ```
 
       ```python {{title: 'typed'}}
+      from robyn import Request 
+
       @app.get("/")
       async def h(request: Request) -> str:
           return "Hello, world"
@@ -86,15 +87,24 @@ Batman was excited to learn that he could add events as functions as well as dec
         request.headers["before"] = "sync_before_request"
         print(request)
 
-    ```
-
-    ```python {{ title: 'sync' }}
     @app.after_request("/")
     def hello_after_request(response: Response):
         response.headers["after"] = "sync_after_request"
         print(response)
+    ```
 
+    ```python {{ title: 'typed' }}
+    from request import Request, Response
 
+    @app.before_request("/")
+    async def hello_before_request(request):
+        request.headers["before"] = "sync_before_request"
+        print(request)
+
+    @app.after_request("/")
+    def hello_after_request(response):
+        response.headers["after"] = "sync_after_request"
+        print(response)
     ```
 
 

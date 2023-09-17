@@ -30,11 +30,13 @@ A view, simply is a function with a collection of other closures. e.g.
     ```
 
     ```python {{title: 'typed'}}
+      from robyn import Request
+
       def sample_view():
         def get():
             return "Hello, world!"
 
-        def post(request):
+        def post(request: Request):
             body = request.body
             return {"status_code": 200, "description": body}
     ```
@@ -63,6 +65,19 @@ You can serve views in two ways:
            return {"status_code": 200, "description": body}
 
       ```
+      ```python {{ title: 'typed' }}
+      from robyn import Request
+
+      @app.view("/sync/view/decorator")
+      def sync_decorator_view():
+       def get():
+           return "Hello, world!"
+
+       def post(request: Request):
+           body = request.body
+           return {"status_code": 200, "description": body}
+
+      ```
     </CodeGroup>
   </Col>
 </Row>
@@ -75,6 +90,14 @@ You can serve views in two ways:
     <CodeGroup title="Request" tag="GET" label="/hello_world">
 
       ```python {{ title: 'untyped' }}
+        from .views import sample_view
+
+        ...
+        ...
+
+        app.add_view("/", sample_view)
+      ```
+      ```python {{ title: 'typed' }}
         from .views import sample_view
 
         ...
@@ -108,6 +131,27 @@ The only thing to remember is that you need to add the subrouter to the main rou
     <CodeGroup title="Request" tag="GET" label="/hello_world">
 
       ```python {{ title: 'untyped' }}
+      from robyn import Robyn, SubRouter
+
+      app = Robyn(__file__)
+
+      sub_router = SubRouter("/sub_router")
+
+      @sub_router.get("/hello")
+      def hello():
+          return "Hello, world"
+
+      web_socket = SubRouter("/web_socket")
+
+      @web_socket.message()
+      async def hello():
+          return "Hello, world"
+
+      app.include_router(sub_router)
+      ```
+
+
+      ```python {{ title: 'typed' }}
       from robyn import Robyn, SubRouter
 
       app = Robyn(__file__)

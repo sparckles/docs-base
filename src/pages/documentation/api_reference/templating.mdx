@@ -16,7 +16,7 @@ Batman was excited to learn that he could add events as functions as well as dec
 
     <CodeGroup title="Request" tag="GET" label="/hello_world">
 
-    ```
+    ```python {{title: 'untyped'}}
     from robyn.templating import JinjaTemplate
 
     current_file_path = pathlib.Path(__file__).parent.resolve()
@@ -26,8 +26,8 @@ Batman was excited to learn that he could add events as functions as well as dec
     def template_render():
         context = {"framework": "Robyn", "templating_engine": "Jinja2"}
 
-    template = JINJA_TEMPLATE.render_template(template_name="test.html", **context)
-    return template
+        template = JINJA_TEMPLATE.render_template(template_name="test.html", **context)
+        return template
 
     ```
 
@@ -41,8 +41,8 @@ Batman was excited to learn that he could add events as functions as well as dec
     def template_render():
         context = {"framework": "Robyn", "templating_engine": "Jinja2"}
 
-    template = JINJA_TEMPLATE.render_template(template_name="test.html", **context)
-    return template
+        template = JINJA_TEMPLATE.render_template(template_name="test.html", **context)
+        return template
 
     ```
     </CodeGroup>
@@ -56,7 +56,7 @@ Batman was excited to learn that he could add events as functions as well as dec
   <Col sticky>
     <CodeGroup title="Request" tag="GET" label="/hello_world">
 
-      ```html {{ title: 'untyped' }}
+      ```html
         <!DOCTYPE html>
         <html lang="en">
         <head>
@@ -87,6 +87,10 @@ To do that, you need to import the `TemplateInterface` from `robyn.templating`
       ```python {{ title: 'untyped' }}
       from robyn.templating import TemplateInterface
       ```
+
+      ```python {{ title: 'typed' }}
+      from robyn.templating import TemplateInterface
+      ```
     </CodeGroup>
   </Col>
 </Row>
@@ -109,6 +113,19 @@ Then You need to have a `render_template` method inside your implementation. So,
             )
 
         def render_template(self, template_name, **kwargs):
+            return self.env.get_template(template_name).render(**kwargs)
+      ```
+
+      ```python {{ title: 'typed' }}
+      class JinjaTemplate(TemplateInterface):
+        def __init__(self, directory, encoding="utf-8", followlinks=False):
+            self.env = Environment(
+                loader=FileSystemLoader(
+                    searchpath=directory, encoding=encoding, followlinks=followlinks
+                )
+            )
+
+        def render_template(self, template_name: str, **kwargs):
             return self.env.get_template(template_name).render(**kwargs)
       ```
     </CodeGroup>

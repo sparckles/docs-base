@@ -28,12 +28,12 @@ For a simple synchronous request, Batman wrote:
     ```
 
     ```python {{title: 'typed'}}
-    from robyn import Robyn
+    from robyn import Robyn, Request
 
     app = Robyn(__file__)
 
     @app.get("/")
-    def h(request):
+    def h(request: Request):
         return "Hello, world"
 
     app.start()
@@ -60,6 +60,8 @@ For a simple synchronous request, Batman wrote:
       ```
 
       ```python {{title: 'typed'}}
+      from robyn import Request
+
       @app.get("/")
       async def h(request: Request) -> str:
           return "Hello, world"
@@ -91,6 +93,8 @@ For example, Batman learned to create a POST request like this:
     ```
 
     ```python {{title: 'typed'}}
+    from robyn import Request
+
     @app.post("/")
     async def h(request):
         return "Hello World"
@@ -124,11 +128,11 @@ Batman was curios about the ability to return JSON responses from the applicatio
     ```
 
     ```python {{title: 'typed'}}
-    from robyn import jsonify
+    from robyn import jsonify, Request
 
 
     @app.post("/jsonify")
-    async def json(request):
+    async def json(request: Request):
         return jsonify({"hello": "world"})
 
     ```
@@ -166,10 +170,10 @@ Batman was curious about how to access path parameters and query parameters from
     ```
 
     ```python {{ title: 'sync' }}
-    from robyn import jsonify
+    from robyn import jsonify, Request
 
     @app.post("/jsonify/:id")
-    async def json(request):
+    async def json(request: Request):
         print(request["path_params"]["id"])
         return jsonify({"hello": "world"})
 
@@ -202,8 +206,10 @@ Batman was curious about how to access path parameters and query parameters from
     ```
 
     ```python {{ title: 'sync' }}
+    from robyn import Request
+
     @app.get("/query")
-    async def query_get(request):
+    async def query_get(request: Request):
         query_data = request["queries"]
         return jsonify(query_data)
     ```
@@ -245,8 +251,10 @@ Batman learned to customize response formats by returning dictionaries or using 
     ```
 
     ```python {{title: 'typed'}}
+    from robyn import Request
+
     @app.post("/dictionary")
-    async def dictionary(request):
+    async def dictionary(request: Request):
         return {
             "status_code": 200,
             "description": "This is a regular response",
@@ -279,10 +287,10 @@ To use the Response object, he wrote:
     ```
 
     ```python {{title: 'typed'}}
-    from robyn.robyn import Response
+    from robyn.robyn import Response, Request
 
     @app.get("/response")
-    async def response(request):
+    async def response(request: Request):
         return Response(status_code=200, headers={}, description="OK")
 
     ```
@@ -325,8 +333,10 @@ Batman then wanted to return a binary output from his application. He could do t
     ```
 
     ```python {{title: 'typed'}}
+    from robyn import Request, Response
+
     @app.get("/binary_output_response_sync")
-    def binary_output_response_sync(request):
+    def binary_output_response_sync(request: Request):
         return Response(
             status_code=200,
             headers={"Content-Type": "application/octet-stream"},
@@ -335,12 +345,12 @@ Batman then wanted to return a binary output from his application. He could do t
 
 
     @app.get("/binary_output_async")
-    async def binary_output_async(request):
+    async def binary_output_async(request: Request):
         return b"OK"
 
 
     @app.get("/binary_output_response_async")
-    async def binary_output_response_async(request):
+    async def binary_output_response_async(request: Request):
         return Response(
             status_code=200,
             headers={"Content-Type": "application/octet-stream"},
@@ -381,8 +391,10 @@ Either, by using the `headers` field in the `Response` object:
     ```
 
     ```python {{title: 'typed'}}
+    from robyn import Request
+
     @app.get("/")
-    def binary_output_response_sync(request):
+    def binary_output_response_sync(request: Request):
         return Response(
             status_code=200,
             headers={"Content-Type": "application/octet-stream"},
@@ -447,8 +459,10 @@ Either, by using the `headers` field in the `Request` object:
     ```
 
     ```python {{title: 'typed'}}
+    from robyn import Request
+
     @app.get("/")
-    def binary_output_response_sync(request):
+    def binary_output_response_sync(request: Request):
       headers = request.headers
 
       print("These are the request headers: ", headers)
@@ -506,11 +520,11 @@ After learning about response formats and headers, Batman learned to set status 
     ```
 
     ```python {{title: 'typed'}}
-    from robyn import status_codes
+    from robyn import status_codes, Request
 
 
     @app.get("/response")
-    async def response(request):
+    async def response(request: Request):
         return Response(status_code=status_codes.HTTP_200_OK, headers={}, description="OK")
     ```
     </CodeGroup>
